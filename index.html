@@ -1,198 +1,368 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Perfect Day</title>
+
     <link rel="stylesheet" href="styles.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
 </head>
+
+
 <body>
-<!--Navigation-->
-<header class="navbar">
-    <a href="index.html" class="logo">
-        <img src="">
-    </a>
-    <nav>
-        <a href="index.html" class="active">Home</a>
-        <a href="#today">My Day</a>
-        <a href="#garden">Garden</a>
-        <a href="#explore">Explore</a>
-        <a href="#more">About</a>
-    </nav>
-</header>
-<!--Main Content-->
-<main>
-    <!--Hero-->
-    <section class="hero">
-        <div class="hero-text">
-            <p class="eyebrow">
-                A little space for you
-            </p>
-            <h1>
-                Perfect
-                <span>Day</span>
-            </h1>
-            <p class="hero-description">
-                A little corner of the internet for your
-                thoughts, creativity, curiosity and joy
-            </p>
-            <div class="hero-buttons">
-                <a href="#today" class="primary-button">
-                    Start your day →
-                </a>
-                <a href="#explore" class="secondary-button">
-                    Explore ✿
-                </a>
-            </div>
-        </div>
-    <!--Little garden illustration-->
-    <div class="hero-garden">
-        <div class="sun">☀️</div>
 
-        <div class="cloud cloud-one"></div>
-        <div class="cloud cloud-two"></div>
+    <!-- ================================
+         NAVIGATION
+    ================================= -->
 
-        <div class="hill hill-back"></div>
-        <div class="hill hill-front"></div>
+    <header class="navbar">
 
-        <div class="hero-flower flower-one">🌷</div>
-        <div class="hero-flower flower-two">🌼</div>
-        <div class="hero-flower flower-three">🌸</div>
-        <div class="hero-flower flower-four">🌻</div>
+        <a href="index.html" class="logo">
+            Perfect Day
+            <span>✦</span>
+        </a>
 
-        <div class="butterfly">🦋</div>
-    </div>
-    </section>
-    <!--Daily Check in-->
-    <section class="section" id="today">
-        <div class="section-heading">
-            <p class="section-label">
-                Today
-            </p>
-            <h2>
-                How are you feeling?
-            </h2>
-            <p>
-                There is no right answer.
-                Just choose what feels like you.
-            </p>
-        </div>
-        <div class="check-in-card">
-            <button class="mood-button" data-mood="Wonderful">
-                🤩
-                <span>Wonderful</span>
-            </button>
-            <button class="mood-button" data-mood="Good">
-                😊
-                <span>Good</span>
-            </button>
-            <button class="mood-button" data-mood="Okay">
-                😐
-                <span>Okay</span>
-            </button>
-            <button class="mood-button" data-mood="Tired">
-                🥱
-                <span>Tired</span>
-            </button>
-            <button class="mood-button" data-mood="Not great">
-                🌧️
-                <span>Not great</span>
-            </button>
-            <p class="mood-result" id="moodResult">
-                    Choose a mood to check in 🌸
+
+        <nav class="nav-links">
+
+            <a href="index.html" class="active">
+                Home
+            </a>
+
+            <a href="myday.html">
+                My Day
+            </a>
+
+            <a href="garden.html">
+                Garden
+            </a>
+
+            <a href="games.html">
+                Games
+            </a>
+
+            <a href="explore.html">
+                Explore
+            </a>
+
+        </nav>
+
+
+        <button class="menu-button" aria-label="Open menu">
+            ☰
+        </button>
+
+    </header>
+
+
+
+    <!-- ================================
+         HERO
+    ================================= -->
+
+    <main>
+
+        <section class="hero">
+
+            <!-- LEFT SIDE -->
+
+            <div class="hero-content">
+
+                <p class="small-title">
+                    ✦ WELCOME TO YOUR LITTLE CORNER ✦
                 </p>
-        </div>
-    </section>
-    <!-- EXPLORE -->
-        <section class="section" id="explore">
+
+
+                <h1>
+                    Make today
+                    <span>your perfect day.</span>
+                </h1>
+
+
+                <p class="hero-description">
+                    A little space to write, dream, play,
+                    reflect and simply be yourself.
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a href="myday.html" class="button primary-button">
+                        Start my day ✦
+                    </a>
+
+                    <a href="#explore" class="button outline-button">
+                        Explore
+                    </a>
+
+                </div>
+
+
+                <!-- tiny handwritten note -->
+
+                <div class="hero-note">
+
+                    <span>✎</span>
+
+                    <p>
+                        You don't need a perfect day.
+                        Just a day that feels like yours.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RIGHT SIDE -->
+
+            <div class="hero-art">
+
+                <div class="sun">
+                    ☀
+                </div>
+
+
+                <div class="cloud cloud-one"></div>
+
+                <div class="cloud cloud-two"></div>
+
+
+                <!-- decorative stars -->
+
+                <span class="star star-one">✦</span>
+                <span class="star star-two">✧</span>
+                <span class="star star-three">✦</span>
+                <span class="star star-four">✧</span>
+
+
+                <!-- little window/card -->
+
+                <div class="welcome-card">
+
+                    <div class="card-top">
+
+                        <span>
+                            my little space
+                        </span>
+
+                        <span>
+                            ✿
+                        </span>
+
+                    </div>
+
+
+                    <div class="card-middle">
+
+                        <div class="mini-sun">
+                            ☀
+                        </div>
+
+                        <p>
+                            Today can be
+                            whatever you
+                            want it to be.
+                        </p>
+
+                    </div>
+
+
+                    <div class="card-bottom">
+
+                        <span>♡</span>
+                        <span>✦</span>
+                        <span>☁</span>
+                        <span>✿</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- plants -->
+
+                <div class="plant plant-one">
+                    🌱
+                </div>
+
+                <div class="plant plant-two">
+                    🌷
+                </div>
+
+                <div class="plant plant-three">
+                    🌼
+                </div>
+
+
+                <div class="hill"></div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================
+             QUICK ACCESS
+        ================================= -->
+
+        <section class="quick-section">
 
             <div class="section-heading">
 
-                <p class="section-label">
-                    YOUR SPACE
+                <p class="section-tag">
+                    WHAT'S ON YOUR MIND?
                 </p>
 
                 <h2>
-                    What do you feel like doing?
+                    Pick your little adventure.
                 </h2>
-
-                <p>
-                    There's always somewhere to wander.
-                </p>
 
             </div>
 
 
-            <div class="feature-grid">
+            <div class="quick-grid">
 
-                <a href="#" class="feature-card green">
-                    <span class="card-icon">📝</span>
 
-                    <div>
-                        <p class="card-label">WRITE</p>
-                        <h3>Little Notes</h3>
+                <!-- NOTE -->
 
-                        <p>
-                            Keep your thoughts, ideas
-                            and little reminders.
-                        </p>
+                <a href="notes.html" class="quick-card card-blue">
+
+                    <div class="quick-icon">
+                        ✎
                     </div>
 
-                    <span class="arrow">→</span>
+                    <div>
+
+                        <p class="card-category">
+                            WRITE
+                        </p>
+
+                        <h3>
+                            Little Notes
+                        </h3>
+
+                        <p>
+                            Save your thoughts,
+                            ideas and reminders.
+                        </p>
+
+                    </div>
+
+                    <span class="card-arrow">
+                        ↗
+                    </span>
+
                 </a>
 
 
-                <a href="#" class="feature-card pink">
-                    <span class="card-icon">💭</span>
 
-                    <div>
-                        <p class="card-label">LET IT OUT</p>
-                        <h3>Brain Dump</h3>
+                <!-- BRAIN DUMP -->
 
-                        <p>
-                            Empty your mind.
-                            No organising required.
-                        </p>
+                <a href="braindump.html" class="quick-card card-pink">
+
+                    <div class="quick-icon">
+                        ☁
                     </div>
 
-                    <span class="arrow">→</span>
+                    <div>
+
+                        <p class="card-category">
+                            LET IT OUT
+                        </p>
+
+                        <h3>
+                            Brain Dump
+                        </h3>
+
+                        <p>
+                            Put every thought
+                            somewhere safe.
+                        </p>
+
+                    </div>
+
+                    <span class="card-arrow">
+                        ↗
+                    </span>
+
                 </a>
 
 
-                <a href="#garden" class="feature-card yellow">
-                    <span class="card-icon">🌱</span>
 
-                    <div>
-                        <p class="card-label">GROW</p>
-                        <h3>My Garden</h3>
+                <!-- GARDEN -->
 
-                        <p>
-                            Take care of your little
-                            digital garden.
-                        </p>
+                <a href="garden.html" class="quick-card card-green">
+
+                    <div class="quick-icon">
+                        🌱
                     </div>
 
-                    <span class="arrow">→</span>
+                    <div>
+
+                        <p class="card-category">
+                            GROW
+                        </p>
+
+                        <h3>
+                            My Garden
+                        </h3>
+
+                        <p>
+                            Take care of a little
+                            digital plant.
+                        </p>
+
+                    </div>
+
+                    <span class="card-arrow">
+                        ↗
+                    </span>
+
                 </a>
 
 
-                <a href="#" class="feature-card blue">
-                    <span class="card-icon">🎮</span>
 
-                    <div>
-                        <p class="card-label">PLAY</p>
-                        <h3>Little Games</h3>
+                <!-- GAMES -->
 
-                        <p>
-                            Take a break and play
-                            something tiny and fun.
-                        </p>
+                <a href="games.html" class="quick-card card-yellow">
+
+                    <div class="quick-icon">
+                        ✦
                     </div>
 
-                    <span class="arrow">→</span>
+                    <div>
+
+                        <p class="card-category">
+                            PLAY
+                        </p>
+
+                        <h3>
+                            Tiny Games
+                        </h3>
+
+                        <p>
+                            Take a little break
+                            and have some fun.
+                        </p>
+
+                    </div>
+
+                    <span class="card-arrow">
+                        ↗
+                    </span>
+
                 </a>
 
             </div>
@@ -200,67 +370,193 @@
         </section>
 
 
-        <!-- QUOTE -->
-        <section class="quote-section">
 
-            <p class="section-label">
-                A LITTLE THOUGHT
-            </p>
+        <!-- ================================
+             MOOD CHECK
+        ================================= -->
 
-            <div class="quote-decoration">
-                ✿
+        <section class="mood-section" id="today">
+
+            <div class="mood-container">
+
+                <div class="mood-text">
+
+                    <p class="section-tag">
+                        DAILY CHECK-IN
+                    </p>
+
+                    <h2>
+                        How's your day
+                        going?
+                    </h2>
+
+                    <p>
+                        No judgement.
+                        No right answers.
+                        Just check in with yourself.
+                    </p>
+
+                </div>
+
+
+                <div class="mood-box">
+
+                    <button
+                        class="mood"
+                        data-mood="Amazing">
+                        ✨
+                        <span>Amazing</span>
+                    </button>
+
+
+                    <button
+                        class="mood"
+                        data-mood="Good">
+                        ☀️
+                        <span>Good</span>
+                    </button>
+
+
+                    <button
+                        class="mood"
+                        data-mood="Okay">
+                        🌱
+                        <span>Okay</span>
+                    </button>
+
+
+                    <button
+                        class="mood"
+                        data-mood="Tired">
+                        ☁️
+                        <span>Tired</span>
+                    </button>
+
+
+                    <button
+                        class="mood"
+                        data-mood="Rough">
+                        🌧
+                        <span>Rough</span>
+                    </button>
+
+
+                    <p
+                        class="mood-response"
+                        id="moodResponse">
+                        Pick one ♡
+                    </p>
+
+                </div>
+
             </div>
 
+        </section>
+
+
+
+        <!-- ================================
+             QUOTE
+        ================================= -->
+
+        <section class="quote-section">
+
+            <div class="quote-decoration">
+                ✦
+            </div>
+
+
+            <p class="section-tag">
+                A LITTLE REMINDER
+            </p>
+
+
             <blockquote id="dailyQuote">
-                "Small steps still count."
+                You are allowed to take life
+                one little step at a time.
             </blockquote>
 
-            <button id="quoteButton" class="quote-button">
-                Another thought ✨
+
+            <button
+                id="quoteButton"
+                class="quote-button">
+
+                Give me another ✦
+
             </button>
 
         </section>
 
 
-        <!-- GARDEN -->
-        <section class="section" id="garden">
 
-            <div class="garden-preview">
+        <!-- ================================
+             GARDEN PREVIEW
+        ================================= -->
 
-                <div class="garden-text">
+        <section class="garden-section">
 
-                    <p class="section-label">
-                        YOUR LITTLE WORLD
+            <div class="garden-card">
+
+
+                <div class="garden-info">
+
+                    <p class="section-tag">
+                        YOUR LITTLE GARDEN
                     </p>
+
 
                     <h2>
-                        Watch something
-                        <span>grow.</span>
+                        Something
+                        <span>is growing.</span>
                     </h2>
 
+
                     <p>
-                        Your garden grows alongside you.
-                        Every little action can help something bloom.
+                        Look after your plant,
+                        complete little activities
+                        and watch your garden grow
+                        over time.
                     </p>
 
-                    <button id="waterButton" class="primary-button">
-                        💧 Water your plant
-                    </button>
+
+                    <a
+                        href="garden.html"
+                        class="button primary-button">
+
+                        Visit my garden →
+
+                    </a>
 
                 </div>
 
 
-                <div class="plant-area">
 
-                    <div class="garden-sun">
-                        ☀️
-                    </div>
+                <div class="garden-visual">
 
-                    <div id="plant" class="plant">
+                    <span class="garden-star">
+                        ✦
+                    </span>
+
+
+                    <div class="big-plant">
                         🌱
                     </div>
 
-                    <div class="ground"></div>
+
+                    <div class="garden-ground"></div>
+
+
+                    <span class="garden-flower flower-a">
+                        🌼
+                    </span>
+
+                    <span class="garden-flower flower-b">
+                        🌷
+                    </span>
+
+                    <span class="garden-flower flower-c">
+                        🌸
+                    </span>
 
                 </div>
 
@@ -269,61 +565,192 @@
         </section>
 
 
-        <!-- DAILY CHALLENGE -->
-        <section class="section">
 
-            <div class="challenge-card">
+        <!-- ================================
+             EXPLORE
+        ================================= -->
 
-                <div class="challenge-icon">
-                    ✨
-                </div>
+        <section
+            class="explore-section"
+            id="explore">
 
-                <div>
+            <div class="section-heading">
 
-                    <p class="section-label">
-                        TODAY'S LITTLE CHALLENGE
-                    </p>
+                <p class="section-tag">
+                    EXPLORE
+                </p>
 
-                    <h2 id="challengeText">
-                        Do one small thing
-                        that makes you happy.
-                    </h2>
+                <h2>
+                    There's more to discover.
+                </h2>
 
-                    <p>
-                        It doesn't have to be productive.
-                        It just has to brighten your day.
-                    </p>
+            </div>
 
-                </div>
 
-                <button id="challengeButton">
-                    I did it 🌸
-                </button>
+            <div class="explore-grid">
+
+
+                <a href="flashcards.html"
+                   class="explore-item">
+
+                    <span class="explore-number">
+                        01
+                    </span>
+
+                    <span class="explore-icon">
+                        🃏
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Fun Flashcards
+                        </h3>
+
+                        <p>
+                            Random questions,
+                            facts and little surprises.
+                        </p>
+
+                    </div>
+
+                    <span>
+                        →
+                    </span>
+
+                </a>
+
+
+
+                <a href="flowerpedia.html"
+                   class="explore-item">
+
+                    <span class="explore-number">
+                        02
+                    </span>
+
+                    <span class="explore-icon">
+                        🌸
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Flowerpedia
+                        </h3>
+
+                        <p>
+                            Explore flowers and
+                            discover their stories.
+                        </p>
+
+                    </div>
+
+                    <span>
+                        →
+                    </span>
+
+                </a>
+
+
+
+                <a href="games.html"
+                   class="explore-item">
+
+                    <span class="explore-number">
+                        03
+                    </span>
+
+                    <span class="explore-icon">
+                        🎮
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Little Games
+                        </h3>
+
+                        <p>
+                            Tiny games for when
+                            your brain needs a break.
+                        </p>
+
+                    </div>
+
+                    <span>
+                        →
+                    </span>
+
+                </a>
+
+
+
+                <a href="quotes.html"
+                   class="explore-item">
+
+                    <span class="explore-number">
+                        04
+                    </span>
+
+                    <span class="explore-icon">
+                        💭
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Quote Garden
+                        </h3>
+
+                        <p>
+                            Find a little reminder
+                            for your day.
+                        </p>
+
+                    </div>
+
+                    <span>
+                        →
+                    </span>
+
+                </a>
 
             </div>
 
         </section>
 
 
-        <!-- FINAL MESSAGE -->
-        <section class="final-section">
 
-            <div>
-                🌸
-            </div>
+        <!-- ================================
+             FINAL MESSAGE
+        ================================= -->
+
+        <section class="final-message">
+
+            <span>
+                ✿
+            </span>
 
             <h2>
-                Your day doesn't have
-                to be perfect.
+                Your perfect day
+                starts here.
             </h2>
 
             <p>
-                Sometimes, perfect is simply
-                making room for a little joy.
+                Make some memories.
+                Write something down.
+                Grow something.
+                Play a little.
             </p>
 
-            <a href="#today" class="primary-button">
-                Begin again ✨
+
+            <a
+                href="myday.html"
+                class="button primary-button">
+
+                Let's go ✦
+
             </a>
 
         </section>
@@ -331,34 +758,103 @@
     </main>
 
 
-    <!-- FOOTER -->
+
+    <!-- ================================
+         FOOTER
+    ================================= -->
+
     <footer>
 
-        <h3>
-            Perfect Day ✿
-        </h3>
+        <div class="footer-main">
 
-        <p>
-            A little space to make today yours.
-        </p>
+            <div class="footer-brand">
 
-        <div class="footer-links">
-            <a href="index.html">Home</a>
-            <a href="#today">My Day</a>
-            <a href="#garden">Garden</a>
-            <a href="#explore">Explore</a>
+                <h3>
+                    Perfect Day ✦
+                </h3>
+
+                <p>
+                    A little corner of the internet
+                    made just for you.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Explore
+                </h4>
+
+                <a href="myday.html">
+                    My Day
+                </a>
+
+                <a href="garden.html">
+                    Garden
+                </a>
+
+                <a href="games.html">
+                    Games
+                </a>
+
+                <a href="flowerpedia.html">
+                    Flowerpedia
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Your Space
+                </h4>
+
+                <a href="notes.html">
+                    Notes
+                </a>
+
+                <a href="braindump.html">
+                    Brain Dump
+                </a>
+
+                <a href="quotes.html">
+                    Quotes
+                </a>
+
+                <a href="flashcards.html">
+                    Flashcards
+                </a>
+
+            </div>
+
         </div>
 
-        <small>
-            Made with ♡ · Perfect Day © 2026
-        </small>
+
+        <div class="footer-bottom">
+
+            <p>
+                Made with ✦ for imperfectly perfect days.
+            </p>
+
+            <p>
+                © 2026 Perfect Day
+            </p>
+
+        </div>
 
     </footer>
 
 
-    <!-- JavaScript -->
+
+    <!-- ================================
+         JAVASCRIPT
+    ================================= -->
+
     <script src="Games.js"></script>
 
-</main>
 </body>
+
 </html>
