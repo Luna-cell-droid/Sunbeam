@@ -1889,3 +1889,2211 @@ footer {
     }
 
 }
+/* =========================================================
+   OTHER WEBPAGES
+   My Day • Notes • Brain Dump • Garden • Games
+   Flashcards • Flowerpedia • Quotes • Explore
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE HERO
+   ========================================================= */
+
+.page-hero {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 90px 30px 60px;
+    text-align: center;
+}
+
+.page-hero .section-tag {
+    color: var(--vintage-berry);
+    margin-bottom: 12px;
+}
+
+.page-hero h1 {
+    font-family: "Gentium Plus", serif;
+    font-size: clamp(3.2rem, 7vw, 5.8rem);
+    line-height: 0.95;
+    color: var(--prussian-blue);
+}
+
+.page-hero h1 span {
+    display: block;
+    color: var(--vintage-berry);
+    font-style: italic;
+}
+
+.page-hero p:last-child {
+    max-width: 650px;
+    margin: 22px auto 0;
+    color: var(--dusk-blue);
+}
+/* =========================================================
+   MY DAY PAGE
+   ========================================================= */
+
+
+/* ---------- PAGE INTRO ---------- */
+
+.page-hero {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 85px 30px 55px;
+    text-align: center;
+}
+
+.page-hero .section-tag {
+    margin-bottom: 15px;
+    color: var(--vintage-berry);
+}
+
+.page-hero h1 {
+    margin: 0;
+    color: var(--prussian-blue);
+    font-family: "Gentium Plus", serif;
+    font-size: clamp(3.5rem, 7vw, 6rem);
+    line-height: 0.95;
+}
+
+.page-hero h1 span {
+    display: block;
+    color: var(--vintage-berry);
+    font-style: italic;
+}
+
+.page-hero > p:last-child {
+    max-width: 650px;
+    margin: 25px auto 0;
+    color: var(--dusk-blue);
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   TODAY + TO-DO
+   ========================================================= */
+
+.day-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 30px 75px;
+
+    display: grid;
+    grid-template-columns: 0.75fr 1.25fr;
+    gap: 25px;
+}
+
+
+/* ---------- DATE CARD ---------- */
+
+.date-card {
+    min-height: 390px;
+    padding: 40px;
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    border-radius: 28px;
+
+    background: var(--twilight-indigo);
+    color: white;
+
+    box-shadow: 8px 10px 0 rgba(11, 19, 43, 0.12);
+}
+
+.date-card::before {
+    content: "☀";
+    position: absolute;
+
+    top: 25px;
+    right: 30px;
+
+    color: var(--neon-ice);
+    font-size: 4.5rem;
+}
+
+.date-card::after {
+    content: "✦  ✧  ✦";
+
+    position: absolute;
+
+    top: 95px;
+    right: 35px;
+
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1rem;
+    letter-spacing: 8px;
+}
+
+.date-card .section-tag {
+    color: var(--neon-ice);
+}
+
+.date-card h2 {
+    max-width: 300px;
+    margin: 12px 0;
+
+    font-family: "Gentium Plus", serif;
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    line-height: 0.95;
+}
+
+.date-card > p:last-child {
+    margin-top: 10px;
+    color: #dce7e8;
+}
+
+
+/* ---------- TO-DO CARD ---------- */
+
+.todo-card {
+    min-height: 390px;
+    padding: 35px;
+
+    border-radius: 28px;
+
+    background: var(--soft-white);
+
+    border: 2px solid rgba(58, 80, 107, 0.1);
+
+    box-shadow: 8px 10px 0 rgba(58, 80, 107, 0.08);
+}
+
+.card-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+}
+
+.card-heading .section-tag {
+    margin-bottom: 4px;
+    color: var(--vintage-berry);
+}
+
+.card-heading h2 {
+    margin: 0;
+
+    color: var(--prussian-blue);
+
+    font-family: "Gentium Plus", serif;
+    font-size: 2.6rem;
+    line-height: 1;
+}
+
+.card-heading > span {
+    width: 48px;
+    height: 48px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: var(--lilac);
+
+    color: var(--prussian-blue);
+
+    font-size: 1.3rem;
+}
+
+
+/* ---------- TODO INPUT ---------- */
+
+.todo-input {
+    display: flex;
+    gap: 10px;
+
+    margin-bottom: 18px;
+}
+
+.todo-input input {
+    min-width: 0;
+    flex: 1;
+
+    padding: 14px 18px;
+
+    border: 2px solid #d8d1df;
+    border-radius: 30px;
+
+    outline: none;
+
+    background: #faf8f3;
+
+    color: var(--prussian-blue);
+
+    font-family: "Shantell Sans", sans-serif;
+}
+
+.todo-input input::placeholder {
+    color: #89929d;
+}
+
+.todo-input input:focus {
+    border-color: var(--tropical-teal);
+}
+
+.todo-input button {
+    flex-shrink: 0;
+
+    width: 48px;
+    height: 48px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: var(--vintage-berry);
+    color: white;
+
+    font-size: 1.5rem;
+
+    cursor: pointer;
+
+    transition: transform 0.2s ease,
+                background 0.2s ease;
+}
+
+.todo-input button:hover {
+    transform: rotate(90deg);
+    background: var(--prussian-blue);
+}
+
+
+/* ---------- TODO LIST ---------- */
+
+#todoList {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+#todoList li {
+    min-height: 45px;
+
+    padding: 11px 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 12px;
+
+    background: #f0edf3;
+
+    color: var(--prussian-blue);
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   MOOD CHECK-IN
+   ========================================================= */
+
+.day-mood-section {
+    max-width: 1100px;
+
+    margin: 0 auto 75px;
+    padding: 45px;
+
+    border-radius: 28px;
+
+    background: var(--pacific-blue);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 45px;
+}
+
+.day-mood-section > div:first-child {
+    flex: 1;
+}
+
+.day-mood-section .section-tag {
+    color: var(--deep-space);
+}
+
+.day-mood-section h2 {
+    max-width: 500px;
+
+    margin: 8px 0 10px;
+
+    color: var(--prussian-blue);
+
+    font-family: "Gentium Plus", serif;
+    font-size: clamp(2.5rem, 4vw, 3.7rem);
+    line-height: 0.98;
+}
+
+.day-mood-section > div:first-child > p:last-child {
+    color: var(--deep-space);
+}
+
+
+/* ---------- MOODS ---------- */
+
+.day-moods {
+    flex: 1;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 10px;
+}
+
+.day-mood {
+    min-height: 105px;
+
+    padding: 12px 7px;
+
+    border: 2px solid transparent;
+    border-radius: 18px;
+
+    background: var(--soft-white);
+
+    color: var(--prussian-blue);
+
+    font-family: "Shantell Sans", sans-serif;
+
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.day-mood:hover {
+    transform: translateY(-6px);
+
+    border-color: var(--prussian-blue);
+
+    box-shadow: 0 7px 0 rgba(11, 19, 43, 0.1);
+}
+
+.day-mood.selected {
+    transform: translateY(-5px);
+
+    border-color: var(--vintage-berry);
+
+    box-shadow: 0 6px 0 rgba(146, 55, 77, 0.18);
+
+    background: #fffaf8;
+}
+
+.day-mood:first-child {
+    font-size: 1.6rem;
+}
+
+.day-mood:nth-child(2) {
+    font-size: 1.6rem;
+}
+
+.day-mood:nth-child(3) {
+    font-size: 1.6rem;
+}
+
+.day-mood:nth-child(4) {
+    font-size: 1.6rem;
+}
+
+.day-mood:nth-child(5) {
+    font-size: 1.6rem;
+}
+
+.day-mood span {
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   GRATITUDE + REFLECTION
+   ========================================================= */
+
+.gratitude-section {
+    max-width: 1100px;
+
+    margin: 0 auto 80px;
+    padding: 0 30px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+}
+
+.journal-card {
+    padding: 38px;
+
+    border-radius: 28px;
+
+    background: var(--neon-ice);
+
+    color: var(--prussian-blue);
+
+    box-shadow: 7px 9px 0 rgba(58, 80, 107, 0.08);
+}
+
+.journal-card .section-tag {
+    margin-bottom: 8px;
+
+    color: var(--deep-space);
+}
+
+.journal-card h2 {
+    max-width: 430px;
+
+    margin: 0 0 22px;
+
+    font-family: "Gentium Plus", serif;
+    font-size: 2.6rem;
+    line-height: 1;
+}
+
+.journal-card textarea {
+    width: 100%;
+    min-height: 155px;
+
+    box-sizing: border-box;
+
+    padding: 17px;
+
+    resize: vertical;
+
+    border: 2px solid rgba(11, 19, 43, 0.15);
+    border-radius: 15px;
+
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.78);
+
+    color: var(--prussian-blue);
+
+    font-family: "Shantell Sans", sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.journal-card textarea:focus {
+    border-color: var(--prussian-blue);
+}
+
+.journal-card textarea::placeholder {
+    color: #71818b;
+}
+
+
+/* ---------- BERRY CARD ---------- */
+
+.journal-card.berry-card {
+    background: var(--vintage-berry);
+    color: white;
+}
+
+.berry-card .section-tag {
+    color: var(--neon-ice);
+}
+
+.berry-card textarea {
+    background: rgba(255, 255, 255, 0.92);
+}
+
+
+/* ---------- BUTTONS ---------- */
+
+.journal-card .button {
+    margin-top: 15px;
+}
+
+.journal-card .primary-button {
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 30px;
+
+    background: var(--prussian-blue);
+
+    color: white;
+
+    font-family: "Shantell Sans", sans-serif;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.journal-card .primary-button:hover {
+    transform: translateY(-3px);
+
+    background: var(--deep-space);
+}
+
+.berry-card .primary-button {
+    background: var(--neon-ice);
+    color: var(--prussian-blue);
+}
+
+
+/* =========================================================
+   END OF DAY
+   ========================================================= */
+
+.end-day {
+    max-width: 1000px;
+
+    margin: 0 auto 100px;
+    padding: 65px 35px;
+
+    border-radius: 30px;
+
+    background: var(--space-indigo);
+
+    color: white;
+
+    text-align: center;
+
+    box-shadow: 10px 12px 0 rgba(11, 19, 43, 0.12);
+}
+
+.end-day > span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: var(--neon-ice);
+
+    font-size: 2.5rem;
+}
+
+.end-day h2 {
+    margin: 0;
+
+    font-family: "Gentium Plus", serif;
+    font-size: clamp(2.3rem, 5vw, 4rem);
+    line-height: 1;
+}
+
+.end-day p {
+    margin-top: 15px;
+
+    color: #d1dcdf;
+}
+/* =========================================================
+   MY DAY — TODO DELETE BUTTON
+   ========================================================= */
+
+.delete-todo {
+    border: none;
+    background: transparent;
+
+    color: var(--vintage-berry);
+
+    font-size: 1.2rem;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    padding: 3px 7px;
+
+    border-radius: 50%;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.delete-todo:hover {
+    background: rgba(146, 55, 77, 0.12);
+    transform: scale(1.15);
+}
+
+/* =========================================================
+   MY DAY RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 950px) {
+
+    .day-section {
+        grid-template-columns: 1fr;
+    }
+
+    .date-card,
+    .todo-card {
+        min-height: auto;
+    }
+
+    .day-mood-section {
+        margin-left: 30px;
+        margin-right: 30px;
+
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .day-moods {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .page-hero {
+        padding: 60px 20px 45px;
+    }
+
+    .page-hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .day-section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .date-card {
+        min-height: 300px;
+        padding: 30px;
+    }
+
+    .date-card h2 {
+        font-size: 3rem;
+    }
+
+    .todo-card {
+        padding: 28px 22px;
+    }
+
+    .card-heading h2 {
+        font-size: 2.2rem;
+    }
+
+    .day-mood-section {
+        margin-left: 20px;
+        margin-right: 20px;
+
+        padding: 30px 22px;
+    }
+
+    .day-mood-section h2 {
+        font-size: 2.7rem;
+    }
+
+    .day-moods {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .gratitude-section {
+        grid-template-columns: 1fr;
+
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .journal-card {
+        padding: 30px 25px;
+    }
+
+    .journal-card h2 {
+        font-size: 2.3rem;
+    }
+
+    .end-day {
+        margin-left: 20px;
+        margin-right: 20px;
+
+        padding: 50px 25px;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .day-moods {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .todo-input {
+        align-items: center;
+    }
+
+    .todo-input input {
+        width: 100%;
+    }
+}
+/* =========================================================
+   MOOD / DAY CHECK-IN
+   ========================================================= */
+
+.day-mood-section {
+    max-width: 1100px;
+
+    margin: 0 auto 80px;
+    padding: 45px;
+
+    border-radius: 28px;
+
+    background: var(--pacific-blue);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 35px;
+}
+
+.day-mood-section .section-tag {
+    color: var(--deep-space);
+}
+
+.day-mood-section h2 {
+    max-width: 480px;
+
+    font-family: "Gentium Plus", serif;
+    font-size: 3rem;
+    line-height: 1;
+
+    color: var(--prussian-blue);
+}
+
+.day-mood-section p {
+    margin-top: 12px;
+    color: var(--deep-space);
+}
+
+.day-moods {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 12px;
+}
+
+.day-mood {
+    width: 88px;
+    height: 95px;
+
+    border: 2px solid transparent;
+    border-radius: 20px;
+
+    background: var(--soft-white);
+
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.25s ease;
+}
+
+.day-mood:hover,
+.day-mood.selected {
+    transform: translateY(-6px);
+
+    border-color: var(--prussian-blue);
+
+    box-shadow:
+        0 7px 0 rgba(11, 19, 43, 0.12);
+}
+
+.day-mood span {
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   JOURNAL / GRATITUDE
+   ========================================================= */
+
+.gratitude-section {
+    max-width: 1100px;
+
+    margin: 0 auto 90px;
+    padding: 0 30px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+}
+
+.journal-card {
+    padding: 40px;
+
+    border-radius: 28px;
+
+    background: var(--neon-ice);
+
+    color: var(--prussian-blue);
+}
+
+.journal-card .section-tag {
+    color: var(--deep-space);
+}
+
+.journal-card h2 {
+    margin: 10px 0 22px;
+
+    font-family: "Gentium Plus", serif;
+    font-size: 2.5rem;
+}
+
+.journal-card textarea {
+    width: 100%;
+    min-height: 160px;
+
+    padding: 18px;
+
+    resize: vertical;
+
+    border: 2px solid rgba(11, 19, 43, 0.2);
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, 0.75);
+
+    outline: none;
+}
+
+.journal-card textarea:focus {
+    border-color: var(--prussian-blue);
+}
+
+
+/* Berry journal */
+
+.berry-card {
+    background: var(--vintage-berry);
+    color: white;
+}
+
+.berry-card .section-tag {
+    color: var(--neon-ice);
+}
+
+.berry-card textarea {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+
+/* =========================================================
+   NOTES
+   ========================================================= */
+
+.notes-section {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 20px 30px 100px;
+}
+
+.notes-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+.notes-toolbar h2 {
+    font-family: "Gentium Plus", serif;
+    font-size: 3rem;
+    color: var(--prussian-blue);
+}
+
+.notes-layout {
+    display: grid;
+
+    grid-template-columns: 190px 1fr;
+
+    gap: 30px;
+}
+
+
+/* Notes sidebar */
+
+.notes-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.note-category {
+    padding: 12px 15px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: transparent;
+
+    text-align: left;
+
+    color: var(--dusk-blue);
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.note-category:hover {
+    background: var(--lilac);
+}
+
+.note-category.active {
+    background: var(--prussian-blue);
+    color: var(--neon-ice);
+}
+
+
+/* Notes */
+
+.notes-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.note-card {
+    min-height: 220px;
+
+    padding: 25px;
+
+    position: relative;
+
+    border-radius: 18px;
+
+    background: var(--soft-white);
+
+    box-shadow:
+        6px 7px 0 rgba(58, 80, 107, 0.1);
+
+    border: 2px solid rgba(58, 80, 107, 0.1);
+
+    transition: 0.25s ease;
+}
+
+.note-card:nth-child(odd) {
+    transform: rotate(-1deg);
+}
+
+.note-card:nth-child(even) {
+    transform: rotate(1deg);
+}
+
+.note-card:hover {
+    transform: rotate(0deg) translateY(-5px);
+}
+
+.note-date {
+    display: inline-block;
+
+    padding: 4px 9px;
+
+    margin-bottom: 12px;
+
+    border-radius: 20px;
+
+    background: var(--lilac);
+
+    font-size: 0.65rem;
+    font-weight: 800;
+}
+
+.note-card h3 {
+    margin-bottom: 8px;
+
+    font-family: "Gentium Plus", serif;
+    font-size: 1.6rem;
+}
+
+.note-card p {
+    color: var(--dusk-blue);
+    font-size: 0.9rem;
+}
+
+.note-delete {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--vintage-berry);
+
+    cursor: pointer;
+
+    font-size: 1.2rem;
+}
+
+
+/* =========================================================
+   BRAIN DUMP
+   ========================================================= */
+
+.brain-section {
+    max-width: 950px;
+
+    margin: 20px auto 100px;
+    padding: 45px;
+
+    background: var(--soft-white);
+
+    border-radius: 28px;
+
+    box-shadow:
+        10px 12px 0 rgba(58, 80, 107, 0.1);
+}
+
+.brain-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+}
+
+.brain-header h2 {
+    max-width: 600px;
+
+    font-family: "Gentium Plus", serif;
+    font-size: 3rem;
+
+    line-height: 1;
+}
+
+.brain-cloud {
+    color: var(--lilac);
+    font-size: 5rem;
+}
+
+.brain-textarea {
+    width: 100%;
+    min-height: 420px;
+
+    padding: 25px;
+
+    resize: vertical;
+
+    border: 3px dashed var(--pacific-blue);
+    border-radius: 18px;
+
+    outline: none;
+
+    background:
+        repeating-linear-gradient(
+            transparent,
+            transparent 34px,
+            rgba(100, 166, 189, 0.22) 35px
+        );
+
+    font-family: "Shantell Sans", sans-serif;
+
+    line-height: 35px;
+
+    color: var(--prussian-blue);
+}
+
+.brain-textarea:focus {
+    border-color: var(--tropical-teal);
+}
+
+.brain-actions {
+    display: flex;
+    gap: 10px;
+
+    margin-top: 18px;
+}
+
+.saved-message {
+    margin-top: 10px;
+
+    color: var(--vintage-berry);
+
+    font-weight: 700;
+}
+
+
+/* Brain reminder */
+
+.brain-reminder {
+    max-width: 900px;
+
+    margin: 0 auto 100px;
+    padding: 55px;
+
+    border-radius: 28px;
+
+    background: var(--space-indigo);
+
+    color: white;
+
+    text-align: center;
+}
+
+.brain-reminder > span {
+    color: var(--neon-ice);
+    font-size: 2.5rem;
+}
+
+.brain-reminder h2 {
+    margin: 12px auto;
+
+    max-width: 650px;
+
+    font-family: "Gentium Plus", serif;
+    font-size: 3rem;
+}
+
+.brain-reminder p {
+    color: #C9D7DA;
+}
+
+
+/* =========================================================
+   GARDEN PAGE
+   ========================================================= */
+
+.garden-page {
+    max-width: 1100px;
+
+    margin: 0 auto;
+    padding: 20px 30px 100px;
+
+    display: grid;
+
+    grid-template-columns: 1.15fr 0.85fr;
+
+    gap: 25px;
+}
+
+
+/* Garden scene */
+
+.garden-world {
+    min-height: 560px;
+
+    overflow: hidden;
+
+    border-radius: 28px;
+
+    background: var(--pacific-blue);
+
+    box-shadow:
+        10px 12px 0 rgba(58, 80, 107, 0.12);
+}
+
+.garden-sky {
+    min-height: 560px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            to bottom,
+            var(--dusk-blue),
+            var(--pacific-blue)
+        );
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+
+/* Garden sun */
+
+.garden-page-sun {
+    position: absolute;
+
+    top: 35px;
+    right: 40px;
+
+    color: var(--neon-ice);
+
+    font-size: 4rem;
+
+    filter:
+        drop-shadow(0 0 20px rgba(111, 255, 233, 0.4));
+}
+
+
+/* Garden stars */
+
+.garden-page-star {
+    position: absolute;
+
+    top: 90px;
+    left: 60px;
+
+    color: white;
+    font-size: 1.5rem;
+}
+
+.star-two {
+    top: 170px;
+    left: 150px;
+
+    font-size: 1rem;
+}
+
+
+/* Soil */
+
+.garden-soil {
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 25%;
+
+    background: var(--prussian-blue);
+
+    border-radius: 50% 50% 0 0 / 25% 25% 0 0;
+}
+
+
+/* Plant */
+
+.garden-page-plant {
+    position: relative;
+    z-index: 2;
+
+    margin-bottom: 70px;
+
+    font-size: 8rem;
+
+    transition: 0.4s ease;
+}
+
+.garden-page-plant:hover {
+    transform: translateY(-10px) rotate(-3deg);
+}
+
+
+/* Garden controls */
+
+.garden-controls {
+    padding: 38px;
+
+    border-radius: 28px;
+
+    background: var(--soft-white);
+
+    box-shadow:
+        8px 10px 0 rgba(58, 80, 107, 0.08);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.garden-controls h2 {
+    margin-bottom: 10px;
+
+    font-family: "Gentium Plus", serif;
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.garden-controls > p {
+    color: var(--dusk-blue);
+}
+
+
+/* Garden buttons */
+
+.garden-actions {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 10px;
+
+    margin: 28px 0;
+}
+
+.garden-action {
+    min-height: 85px;
+
+    border: 2px solid var(--lilac);
+    border-radius: 15px;
+
+    background: #FAF8F3;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.garden-action:hover {
+    transform: translateY(-5px);
+
+    border-color: var(--tropical-teal);
+
+    background: var(--neon-ice);
+}
+
+.garden-action span {
+    display: block;
+
+    margin-top: 4px;
+
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+
+/* Growth */
+
+.growth-bar {
+    margin-top: 10px;
+}
+
+.growth-bar-top {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+.growth-track {
+    width: 100%;
+    height: 15px;
+
+    overflow: hidden;
+
+    border-radius: 30px;
+
+    background: #E5DFEA;
+}
+
+.growth-progress {
+    width: 0%;
+    height: 100%;
+
+    border-radius: inherit;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--tropical-teal),
+            var(--neon-ice)
+        );
+
+    transition: width 0.5s ease;
+}
+
+.garden-tip {
+    margin-top: 20px;
+
+    color: var(--dusk-blue);
+
+    font-size: 0.8rem;
+}
+
+
+/* Garden journal */
+
+.garden-journal {
+    max-width: 1050px;
+
+    margin: 0 auto 100px;
+    padding: 45px;
+
+    border-radius: 28px;
+
+    background: var(--vintage-berry);
+
+    color: white;
+
+    text-align: center;
+}
+
+.garden-journal .section-tag {
+    color: var(--neon-ice);
+}
+
+.garden-stats {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+.garden-stats div {
+    padding: 20px;
+
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.garden-stats strong {
+    display: block;
+
+    color: var(--neon-ice);
+
+    font-family: "Gentium Plus", serif;
+
+    font-size: 2.5rem;
+}
+
+.garden-stats span {
+    font-size: 0.75rem;
+}
+
+
+/* =========================================================
+   GAMES
+   ========================================================= */
+
+.games-page {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 20px 30px 100px;
+}
+
+.games-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.game-card {
+    padding: 35px;
+
+    border-radius: 28px;
+
+    background: var(--soft-white);
+
+    border: 2px solid rgba(58, 80, 107, 0.1);
+
+    box-shadow:
+        8px 10px 0 rgba(58, 80, 107, 0.08);
+
+    transition: 0.25s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-6px);
+
+    border-color: var(--tropical-teal);
+}
+
+.game-icon {
+    width: 65px;
+    height: 65px;
+
+    margin-bottom: 18px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 18px;
+
+    background: var(--lilac);
+
+    font-size: 2rem;
+}
+
+.game-card:nth-child(2) .game-icon {
+    background: var(--neon-ice);
+}
+
+.game-card:nth-child(3) .game-icon {
+    background: var(--pacific-blue);
+}
+
+.game-card:nth-child(4) .game-icon {
+    background: #F0D7DD;
+}
+
+.game-card h2 {
+    margin-bottom: 10px;
+
+    font-family: "Gentium Plus", serif;
+    font-size: 2.4rem;
+}
+
+.game-card > p:not(.section-tag) {
+    color: var(--dusk-blue);
+
+    margin-bottom: 25px;
+}
+
+.game-area {
+    min-height: 280px;
+
+    padding: 40px;
+
+    border: 3px dashed var(--pacific-blue);
+    border-radius: 22px;
+
+    background: #FAF8F3;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-area h2 {
+    margin-bottom: 10px;
+
+    font-family: "Gentium Plus", serif;
+}
+
+
+/* =========================================================
+   FLASHCARDS
+   ========================================================= */
+
+.flashcards-page {
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    padding: 20px 30px 120px;
+
+    text-align: center;
+}
+
+.flashcard {
+    width: 100%;
+    min-height: 450px;
+
+    position: relative;
+
+    perspective: 1000px;
+
+    cursor: pointer;
+}
+
+.flashcard-front,
+.flashcard-back {
+    position: absolute;
+
+    inset: 0;
+
+    padding: 50px;
+
+    border-radius: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    backface-visibility: hidden;
+
+    transition: transform 0.7s ease;
+
+    box-shadow:
+        10px 12px 0 rgba(58, 80, 107, 0.12);
+}
+
+.flashcard-front {
+    background: var(--twilight-indigo);
+    color: white;
+}
+
+.flashcard-front > span {
+    margin-bottom: 20px;
+
+    color: var(--neon-ice);
+
+    font-size: 4rem;
+}
+
+.flashcard-front p {
+    color: var(--neon-ice);
+
+    font-size: 0.7rem;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.flashcard-front h2 {
+    margin-top: 12px;
+
+    font-family: "Gentium Plus", serif;
+    font-size: 3rem;
+}
+
+.flashcard-back {
+    background: var(--neon-ice);
+
+    color: var(--prussian-blue);
+
+    transform: rotateY(180deg);
+}
+
+.flashcard-back h2 {
+    max-width: 600px;
+
+    font-family: "Gentium Plus", serif;
+    font-size: 2.7rem;
+}
+
+.flashcard.flipped .flashcard-front {
+    transform: rotateY(180deg);
+}
+
+.flashcard.flipped .flashcard-back {
+    transform: rotateY(360deg);
+}
+
+.flashcard-controls {
+    margin-top: 30px;
+}
+
+
+/* =========================================================
+   FLOWERPEDIA
+   ========================================================= */
+
+.flowerpedia-page {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 20px 30px 100px;
+}
+
+.flower-search {
+    max-width: 600px;
+
+    margin: 0 auto 40px;
+}
+
+.flower-search input {
+    width: 100%;
+
+    padding: 16px 22px;
+
+    border: 2px solid var(--pacific-blue);
+    border-radius: 40px;
+
+    outline: none;
+
+    background: var(--soft-white);
+
+    color: var(--prussian-blue);
+}
+
+.flower-search input:focus {
+    border-color: var(--tropical-teal);
+}
+
+.flower-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.flower-card {
+    padding: 25px;
+
+    border-radius: 24px;
+
+    background: var(--soft-white);
+
+    border: 2px solid transparent;
+
+    box-shadow:
+        8px 10px 0 rgba(58, 80, 107, 0.08);
+
+    transition: 0.25s ease;
+}
+
+.flower-card:hover {
+    transform: translateY(-6px);
+
+    border-color: var(--tropical-teal);
+}
+
+.flower-picture {
+    height: 180px;
+
+    margin-bottom: 20px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 18px;
+
+    background:
+        radial-gradient(
+            circle,
+            var(--neon-ice),
+            var(--pacific-blue)
+        );
+
+    font-size: 5rem;
+}
+
+.flower-card h2 {
+    margin-bottom: 8px;
+
+    font-family: "Gentium Plus", serif;
+    font-size: 2rem;
+}
+
+.flower-card > p:not(.section-tag) {
+    color: var(--dusk-blue);
+
+    margin-bottom: 18px;
+
+    font-size: 0.88rem;
+}
+
+.flower-button {
+    border: none;
+
+    padding: 0;
+
+    background: transparent;
+
+    color: var(--vintage-berry);
+
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   QUOTES
+   ========================================================= */
+
+.quote-garden {
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 20px 30px 120px;
+}
+
+.big-quote-card {
+    padding: 70px 55px;
+
+    position: relative;
+
+    border-radius: 30px;
+
+    background: var(--vintage-berry);
+
+    color: white;
+
+    text-align: center;
+
+    box-shadow:
+        10px 12px 0 rgba(58, 80, 107, 0.12);
+}
+
+.quote-mark {
+    position: absolute;
+
+    top: 5px;
+    left: 25px;
+
+    color: var(--neon-ice);
+
+    font-family: Georgia, serif;
+
+    font-size: 7rem;
+
+    opacity: 0.55;
+}
+
+.big-quote {
+    max-width: 750px;
+
+    margin: 0 auto 20px;
+
+    font-family: "Gentium Plus", serif;
+
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+
+    line-height: 1.1;
+}
+
+.quote-author {
+    display: block;
+
+    margin-bottom: 25px;
+
+    color: var(--neon-ice);
+}
+
+.saved-quotes {
+    margin-top: 70px;
+}
+
+.section-heading {
+    margin-bottom: 25px;
+}
+
+.saved-quotes-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.empty-quotes {
+    grid-column: 1 / -1;
+
+    padding: 50px;
+
+    border: 2px dashed var(--lilac);
+
+    border-radius: 25px;
+
+    color: var(--dusk-blue);
+
+    text-align: center;
+}
+
+.empty-quotes span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--vintage-berry);
+
+    font-size: 2.5rem;
+}
+
+
+/* =========================================================
+   EXPLORE PAGE
+   ========================================================= */
+
+.explore-page {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 20px 30px 100px;
+}
+
+.explore-large-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.explore-large-card {
+    min-height: 280px;
+
+    padding: 35px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 26px;
+
+    background: var(--soft-white);
+
+    border: 2px solid transparent;
+
+    box-shadow:
+        8px 10px 0 rgba(58, 80, 107, 0.08);
+
+    transition: 0.25s ease;
+}
+
+.explore-large-card:hover {
+    transform: translateY(-6px);
+
+    border-color: var(--tropical-teal);
+}
+
+.explore-large-card:nth-child(1) {
+    background: var(--neon-ice);
+}
+
+.explore-large-card:nth-child(2) {
+    background: var(--lilac);
+}
+
+.explore-large-card:nth-child(3) {
+    background: var(--pacific-blue);
+}
+
+.explore-large-card:nth-child(4) {
+    background: var(--vintage-berry);
+    color: white;
+}
+
+.explore-large-card:nth-child(5) {
+    background: var(--twilight-indigo);
+    color: white;
+}
+
+.explore-large-card:nth-child(6) {
+    background: var(--soft-white);
+}
+
+.explore-large-card:nth-child(7) {
+    background: var(--tropical-teal);
+}
+
+.explore-large-card:nth-child(8) {
+    background: #FAF8F3;
+}
+
+.explore-large-icon {
+    position: absolute;
+
+    top: 25px;
+    right: 30px;
+
+    font-size: 3.5rem;
+}
+
+.explore-large-card h2 {
+    margin-bottom: 15px;
+
+    font-family: "Gentium Plus", serif;
+
+    font-size: 2.7rem;
+    line-height: 1;
+}
+
+.explore-large-card > p:not(.section-tag) {
+    max-width: 450px;
+
+    margin-bottom: 25px;
+}
+
+.explore-link {
+    font-weight: 800;
+
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   RESPONSIVE — OTHER PAGES ONLY
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .day-section,
+    .garden-page {
+        grid-template-columns: 1fr;
+    }
+
+    .day-mood-section {
+        margin-left: 30px;
+        margin-right: 30px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .gratitude-section {
+        grid-template-columns: 1fr;
+    }
+
+    .notes-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .notes-sidebar {
+        flex-direction: row;
+
+        overflow-x: auto;
+    }
+
+    .flower-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .page-hero {
+        padding:
+            65px 20px
+            45px;
+    }
+
+    .page-hero h1 {
+        font-size: 3.5rem;
+    }
+
+
+    .day-section,
+    .notes-section,
+    .garden-page,
+    .games-page,
+    .flowerpedia-page,
+    .quote-garden,
+    .explore-page {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+
+    .date-card,
+    .todo-card,
+    .journal-card,
+    .brain-section,
+    .garden-controls {
+        padding: 25px;
+    }
+
+
+    .day-mood-section {
+        margin-left: 20px;
+        margin-right: 20px;
+
+        padding: 30px 25px;
+    }
+
+
+    .day-moods {
+        width: 100%;
+    }
+
+    .day-mood {
+        width: 70px;
+        height: 80px;
+    }
+
+
+    .notes-grid,
+    .games-grid,
+    .flower-grid,
+    .saved-quotes-grid,
+    .explore-large-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .garden-actions {
+        grid-template-columns: 1fr;
+    }
+
+
+    .garden-stats {
+        grid-template-columns: 1fr;
+    }
+
+
+    .garden-journal {
+        margin-left: 20px;
+        margin-right: 20px;
+
+        padding: 35px 20px;
+    }
+
+
+    .brain-header {
+        align-items: flex-start;
+    }
+
+    .brain-header h2 {
+        font-size: 2.4rem;
+    }
+
+    .brain-cloud {
+        font-size: 3rem;
+    }
+
+
+    .flashcard {
+        min-height: 380px;
+    }
+
+    .flashcard-front,
+    .flashcard-back {
+        padding: 30px;
+    }
+
+    .flashcard-front h2 {
+        font-size: 2.4rem;
+    }
+
+    .flashcard-back h2 {
+        font-size: 2.1rem;
+    }
+
+
+    .big-quote-card {
+        padding: 55px 25px;
+    }
+
+    .big-quote {
+        font-size: 2.2rem;
+    }
+
+    .quote-mark {
+        left: 12px;
+        font-size: 5rem;
+    }
+
+}
