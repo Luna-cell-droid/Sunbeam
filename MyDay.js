@@ -1,60 +1,78 @@
 /* =========================================================
    PERFECT DAY — MY DAY
    ========================================================= */
-
 document.addEventListener("DOMContentLoaded", function () {
+    /* =====================================================
+       GROWTH SYSTEM
+       ===================================================== */
+    let growth =
+        Number(localStorage.getItem("perfectDayGrowth")) || 0;
 
+    function addGrowth(amount) {
+
+        growth += amount;
+
+        localStorage.setItem(
+            "perfectDayGrowth",
+            growth
+        );
+    }
     /* =====================================================
        TODAY'S DATE
        ===================================================== */
-
-    const todayDate = document.getElementById("todayDate");
-
+    const todayDate =
+        document.getElementById("todayDate");
     if (todayDate) {
-
         const today = new Date();
-
-        const date = today.toLocaleDateString("en-NZ", {
-            weekday: "long",
-            day: "numeric",
-            month: "long"
-        });
-
-        todayDate.textContent = date;
+        todayDate.textContent =
+            today.toLocaleDateString("en-NZ", {
+                weekday: "long",
+                day: "numeric",
+                month: "long"
+            });
     }
-
-
     /* =====================================================
        TO-DO LIST
        ===================================================== */
+    const todoInput =
+        document.getElementById("todoInput");
 
-    const todoInput = document.getElementById("todoInput");
-    const addTodo = document.getElementById("addTodo");
-    const todoList = document.getElementById("todoList");
+    const addTodo =
+        document.getElementById("addTodo");
 
-    let todos = JSON.parse(localStorage.getItem("perfectDayTodos")) || [];
+    const todoList =
+        document.getElementById("todoList");
 
 
+    let todos =
+        JSON.parse(
+            localStorage.getItem("perfectDayTodos")
+        ) || [];
     function saveTodos() {
         localStorage.setItem(
             "perfectDayTodos",
             JSON.stringify(todos)
         );
     }
-
-
     function displayTodos() {
-
         if (!todoList) return;
-
         todoList.innerHTML = "";
-
         todos.forEach(function (todo, index) {
-
-            const li = document.createElement("li");
-
+            const li =
+                document.createElement("li");
             li.innerHTML = `
-                <span>${todo}</span>
+                <label class="todo-item">
+                    <input
+                        type="checkbox"
+                        class="todo-checkbox"
+                        data-index="${index}"
+                        ${todo.completed ? "checked" : ""}
+                    >
+
+                    <span class="${todo.completed ? "completed" : ""}">
+                        ${todo.text}
+                    </span>
+                </label>
 
                 <button
                     class="delete-todo"
@@ -64,8 +82,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 </button>
             `;
 
+
             todoList.appendChild(li);
+
         });
+
     }
 
 
@@ -73,56 +94,120 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (!todoInput) return;
 
-        const task = todoInput.value.trim();
+        const task =
+            todoInput.value.trim();
 
-        if (task === "") {
-            return;
-        }
 
-        todos.push(task);
+        if (task === "") return;
+
+
+        todos.push({
+            text: task,
+            completed: false
+        });
+
 
         saveTodos();
+
         displayTodos();
 
         todoInput.value = "";
+
         todoInput.focus();
+
     }
 
 
     if (addTodo) {
-        addTodo.addEventListener("click", createTodo);
+
+        addTodo.addEventListener(
+            "click",
+            createTodo
+        );
+
     }
 
 
     if (todoInput) {
-        todoInput.addEventListener("keydown", function (event) {
 
-            if (event.key === "Enter") {
-                createTodo();
+        todoInput.addEventListener(
+            "keydown",
+            function (event) {
+
+                if (event.key === "Enter") {
+                    createTodo();
+                }
+
             }
+        );
 
-        });
     }
 
 
     if (todoList) {
 
-        todoList.addEventListener("click", function (event) {
+        todoList.addEventListener(
+            "click",
+            function (event) {
 
-            if (
-                event.target.classList.contains("delete-todo")
-            ) {
 
-                const index =
-                    Number(event.target.dataset.index);
+                /* Complete task */
 
-                todos.splice(index, 1);
+                if (
+                    event.target.classList.contains(
+                        "todo-checkbox"
+                    )
+                ) {
 
-                saveTodos();
-                displayTodos();
+                    const index =
+                        Number(
+                            event.target.dataset.index
+                        );
+
+
+                    if (
+                        !todos[index].completed
+                    ) {
+
+                        todos[index].completed =
+                            true;
+
+                        addGrowth(10);
+
+                    }
+
+
+                    saveTodos();
+
+                    displayTodos();
+
+                }
+
+
+                /* Delete task */
+
+                if (
+                    event.target.classList.contains(
+                        "delete-todo"
+                    )
+                ) {
+
+                    const index =
+                        Number(
+                            event.target.dataset.index
+                        );
+
+
+                    todos.splice(index, 1);
+
+                    saveTodos();
+
+                    displayTodos();
+
+                }
+
             }
-
-        });
+        );
 
     }
 
@@ -130,14 +215,19 @@ document.addEventListener("DOMContentLoaded", function () {
     displayTodos();
 
 
+
     /* =====================================================
-       MOOD CHECK-IN
+       MOOD
        ===================================================== */
 
-    const moods = document.querySelectorAll(".day-mood");
+    const moods =
+        document.querySelectorAll(".day-mood");
 
-    let savedMood =
-        localStorage.getItem("perfectDayMood");
+
+    const savedMood =
+        localStorage.getItem(
+            "perfectDayMood"
+        );
 
 
     moods.forEach(function (mood) {
@@ -147,26 +237,49 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         if (moodName === savedMood) {
+
             mood.classList.add("selected");
+
         }
 
 
-        mood.addEventListener("click", function () {
+        mood.addEventListener(
+            "click",
+            function () {
 
-            moods.forEach(function (item) {
-                item.classList.remove("selected");
-            });
 
-            mood.classList.add("selected");
+                moods.forEach(function (item) {
 
-            localStorage.setItem(
-                "perfectDayMood",
-                moodName
-            );
+                    item.classList.remove(
+                        "selected"
+                    );
 
-        });
+                });
+
+
+                mood.classList.add("selected");
+
+
+                /* Only award growth the first
+                   time today's mood is chosen */
+
+                if (!savedMood) {
+
+                    addGrowth(5);
+
+                }
+
+
+                localStorage.setItem(
+                    "perfectDayMood",
+                    moodName
+                );
+
+            }
+        );
 
     });
+
 
 
     /* =====================================================
@@ -174,10 +287,15 @@ document.addEventListener("DOMContentLoaded", function () {
        ===================================================== */
 
     const gratitude =
-        document.getElementById("gratitude");
+        document.getElementById(
+            "gratitude"
+        );
+
 
     const saveGratitude =
-        document.getElementById("saveGratitude");
+        document.getElementById(
+            "saveGratitude"
+        );
 
 
     if (gratitude) {
@@ -192,39 +310,71 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (saveGratitude) {
 
-        saveGratitude.addEventListener("click", function () {
+        saveGratitude.addEventListener(
+            "click",
+            function () {
 
-            if (!gratitude) return;
+                if (!gratitude) return;
 
-            localStorage.setItem(
-                "perfectDayGratitude",
-                gratitude.value
-            );
 
-            saveGratitude.textContent =
-                "Saved ✦";
+                const text =
+                    gratitude.value.trim();
 
-            setTimeout(function () {
+
+                if (text === "") return;
+
+
+                const previous =
+                    localStorage.getItem(
+                        "perfectDayGratitude"
+                    );
+
+
+                if (!previous) {
+
+                    addGrowth(5);
+
+                }
+
+
+                localStorage.setItem(
+                    "perfectDayGratitude",
+                    text
+                );
+
 
                 saveGratitude.textContent =
-                    "Save this moment ✦";
+                    "Saved ✦";
 
-            }, 1500);
 
-        });
+                setTimeout(function () {
+
+                    saveGratitude.textContent =
+                        "Save this moment ✦";
+
+                }, 1500);
+
+            }
+        );
 
     }
 
 
+
     /* =====================================================
-       DAY REFLECTION
+       REFLECTION
        ===================================================== */
 
     const reflection =
-        document.getElementById("dayReflection");
+        document.getElementById(
+            "dayReflection"
+        );
+
 
     const saveReflection =
-        document.getElementById("saveReflection");
+        document.getElementById(
+            "saveReflection"
+        );
 
 
     if (reflection) {
@@ -239,26 +389,52 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (saveReflection) {
 
-        saveReflection.addEventListener("click", function () {
+        saveReflection.addEventListener(
+            "click",
+            function () {
 
-            if (!reflection) return;
+                if (!reflection) return;
 
-            localStorage.setItem(
-                "perfectDayReflection",
-                reflection.value
-            );
 
-            saveReflection.textContent =
-                "Memory kept ♡";
+                const text =
+                    reflection.value.trim();
 
-            setTimeout(function () {
+
+                if (text === "") return;
+
+
+                const previous =
+                    localStorage.getItem(
+                        "perfectDayReflection"
+                    );
+
+
+                if (!previous) {
+
+                    addGrowth(5);
+
+                }
+
+
+                localStorage.setItem(
+                    "perfectDayReflection",
+                    text
+                );
+
 
                 saveReflection.textContent =
-                    "Keep this memory ♡";
+                    "Memory kept ♡";
 
-            }, 1500);
 
-        });
+                setTimeout(function () {
+
+                    saveReflection.textContent =
+                        "Keep this memory ♡";
+
+                }, 1500);
+
+            }
+        );
 
     }
 

@@ -2533,7 +2533,31 @@ footer {
     background: rgba(146, 55, 77, 0.12);
     transform: scale(1.15);
 }
-
+/* =========================================================
+   MY DAY — TODO CHECKBOXES
+   ========================================================= */
+.todo-item{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    cursor: pointer;
+}
+.todo-checkbox{
+    width: 18px;
+    height: 18px;
+    accent-color: var(--tropical-teal);
+    cursor: pointer;
+}
+.todo-item span{
+    transition: 
+    color 0.2s ease,
+    text-decoration 0.2s ease;
+}
+.todo-item span.completed{
+    color: #89929d;
+    text-decoration: line-through;
+}
 /* =========================================================
    MY DAY RESPONSIVE
    ========================================================= */
@@ -4096,4 +4120,31 @@ footer {
         font-size: 5rem;
     }
 
+}
+.reset-garden-button {
+    margin-top: 20px;
+
+    padding: 10px 18px;
+
+    border: 1px solid rgba(11, 19, 43, 0.2);
+    border-radius: 20px;
+
+    background: transparent;
+
+    color: var(--prussian-blue);
+
+    font-family: "Shantell Sans", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.reset-garden-button:hover {
+    background: var(--prussian-blue);
+    color: white;
+
+    transform: translateY(-2px);
 }
