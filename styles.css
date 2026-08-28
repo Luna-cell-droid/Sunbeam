@@ -4148,3 +4148,615 @@ footer {
 
     transform: translateY(-2px);
 }
+/* =========================================================
+   QUOTE GARDEN
+========================================================= */
+
+
+.quote-garden {
+    width: min(1150px, 90%);
+
+    margin: 0 auto;
+
+    padding: 70px 0 100px;
+}
+
+
+
+/* =========================================================
+   CAROUSEL
+========================================================= */
+
+
+.quote-carousel {
+    text-align: center;
+}
+
+
+.quote-carousel h2 {
+    margin-top: 10px;
+
+    margin-bottom: 40px;
+}
+
+
+
+/* =========================================================
+   CARD AREA
+========================================================= */
+
+
+.quote-card-area {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 28px;
+
+}
+
+
+
+/* =========================================================
+   QUOTE CARD
+========================================================= */
+
+
+.quote-card {
+
+    position: relative;
+
+    width: min(500px, 70vw);
+
+    height: 600px;
+
+    overflow: hidden;
+
+    border-radius: 28px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 20px 45px rgba(11, 19, 43, 0.18);
+
+    touch-action: pan-y;
+
+    user-select: none;
+
+    transition:
+        transform 0.25s ease,
+        opacity 0.25s ease;
+
+}
+
+
+.quote-card img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+
+/* =========================================================
+   QUOTE OVERLAY
+========================================================= */
+
+
+.quote-card-overlay {
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    padding: 100px 40px 40px;
+
+    text-align: left;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            rgba(11, 19, 43, 0.9)
+        );
+
+}
+
+
+.card-quote {
+
+    margin: 0 0 14px;
+
+    font-family:
+        "Gentium Plus",
+        serif;
+
+    font-size: 2rem;
+
+    line-height: 1.2;
+
+}
+
+
+.card-author {
+
+    margin: 0;
+
+    font-family:
+        "Shantell Sans",
+        sans-serif;
+
+    font-size: 0.9rem;
+
+}
+
+
+
+/* =========================================================
+   CARD ANIMATION
+========================================================= */
+
+
+.quote-slide-next {
+
+    animation:
+        quoteNext 0.35s ease;
+
+}
+
+
+.quote-slide-previous {
+
+    animation:
+        quotePrevious 0.35s ease;
+
+}
+
+
+@keyframes quoteNext {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translateX(35px)
+            rotate(2deg);
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform:
+            translateX(0)
+            rotate(0);
+
+    }
+
+}
+
+
+@keyframes quotePrevious {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translateX(-35px)
+            rotate(-2deg);
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform:
+            translateX(0)
+            rotate(0);
+
+    }
+
+}
+
+
+
+/* =========================================================
+   ARROW BUTTONS
+========================================================= */
+
+
+.quote-arrow {
+
+    width: 50px;
+
+    height: 50px;
+
+    flex-shrink: 0;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #5BC0BE;
+
+    color: #0B132B;
+
+    font-family:
+        "Shantell Sans",
+        sans-serif;
+
+    font-size: 1.4rem;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+.quote-arrow:hover {
+
+    transform: scale(1.1);
+
+    box-shadow:
+        0 8px 20px
+        rgba(11, 19, 43, 0.18);
+
+}
+
+
+
+/* =========================================================
+   CONTROLS
+========================================================= */
+
+
+.quote-controls {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    margin-top: 25px;
+
+}
+
+
+#quoteCounter {
+
+    font-family:
+        "Shantell Sans",
+        sans-serif;
+
+    font-size: 0.9rem;
+
+    color: #34506B;
+
+}
+
+
+.quote-swipe-hint {
+
+    margin-top: 18px;
+
+    font-family:
+        "Shantell Sans",
+        sans-serif;
+
+    font-size: 0.8rem;
+
+    color: #34506B;
+
+    opacity: 0.7;
+
+}
+
+
+
+/* =========================================================
+   SAVED QUOTES
+========================================================= */
+
+
+.saved-quotes {
+
+    margin-top: 100px;
+
+}
+
+
+.saved-quotes .section-heading {
+
+    margin-bottom: 30px;
+
+}
+
+
+.saved-quotes-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(230px, 1fr)
+        );
+
+    gap: 25px;
+
+}
+
+
+
+/* =========================================================
+   SAVED CARD
+========================================================= */
+
+
+.saved-quote-card {
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 10px 30px
+        rgba(11, 19, 43, 0.1);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+.saved-quote-card:hover {
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(11, 19, 43, 0.15);
+
+}
+
+
+.saved-quote-card img {
+
+    display: block;
+
+    width: 100%;
+
+    height: 230px;
+
+    object-fit: cover;
+
+}
+
+
+.saved-quote-text {
+
+    padding: 20px;
+
+}
+
+
+.saved-quote-text p {
+
+    margin:
+        0 0 10px;
+
+    font-family:
+        "Gentium Plus",
+        serif;
+
+    font-size: 1.15rem;
+
+    line-height: 1.4;
+
+}
+
+
+.saved-quote-text span {
+
+    font-family:
+        "Shantell Sans",
+        sans-serif;
+
+    font-size: 0.8rem;
+
+    color: #34506B;
+
+}
+
+
+
+/* =========================================================
+   REMOVE BUTTON
+========================================================= */
+
+
+.remove-quote {
+
+    display: block;
+
+    margin-top: 15px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #92374D;
+
+    font-family:
+        "Shantell Sans",
+        sans-serif;
+
+    font-size: 0.8rem;
+
+    cursor: pointer;
+
+}
+
+
+.remove-quote:hover {
+
+    text-decoration: underline;
+
+}
+
+
+
+/* =========================================================
+   EMPTY FAVOURITES
+========================================================= */
+
+
+.empty-quotes {
+
+    grid-column: 1 / -1;
+
+    padding: 50px 20px;
+
+    border-radius: 22px;
+
+    background:
+        rgba(255, 255, 255, 0.55);
+
+    text-align: center;
+
+}
+
+
+.empty-quotes span {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-size: 2rem;
+
+}
+
+
+.empty-quotes p {
+
+    margin: 0;
+
+    font-family:
+        "Shantell Sans",
+        sans-serif;
+
+}
+
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+
+@media (max-width: 700px) {
+
+
+    .quote-garden {
+
+        width: 92%;
+
+        padding-top: 45px;
+
+    }
+
+
+    .quote-card-area {
+
+        gap: 8px;
+
+    }
+
+
+    .quote-card {
+
+        width: 72vw;
+
+        height: 500px;
+
+        border-radius: 22px;
+
+    }
+
+
+    .quote-card-overlay {
+
+        padding:
+            80px 25px 25px;
+
+    }
+
+
+    .card-quote {
+
+        font-size: 1.5rem;
+
+    }
+
+
+    .quote-arrow {
+
+        width: 40px;
+
+        height: 40px;
+
+        font-size: 1rem;
+
+    }
+
+
+    .quote-controls {
+
+        flex-direction: column;
+
+        gap: 12px;
+
+    }
+
+
+    .saved-quotes {
+
+        margin-top: 70px;
+
+    }
+
+}

@@ -22,88 +22,225 @@
 
 <body>
 
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
 <header class="navbar">
 
     <a href="index.html" class="logo">
         Perfect Day <span>✦</span>
     </a>
 
+
     <nav class="nav-links">
 
-        <a href="index.html">Home</a>
-        <a href="myday.html">My Day</a>
-        <a href="garden.html">Garden</a>
-        <a href="games.html">Games</a>
-        <a href="explore.html" class="active">Explore</a>
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="myday.html">
+            My Day
+        </a>
+
+        <a href="garden.html">
+            Garden
+        </a>
+
+        <a href="games.html">
+            Games
+        </a>
+
+        <a href="explore.html" class="active">
+            Explore
+        </a>
 
     </nav>
 
-    <button class="menu-button">
+
+    <button
+        class="menu-button"
+        aria-label="Open menu">
+
         ☰
+
     </button>
 
 </header>
 
 
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
 <main>
 
-    <section class="page-hero">
+
+    <!-- =================================================
+         HERO
+    ================================================== -->
+
+    <section class="page-hero quote-page-hero">
 
         <p class="section-tag">
             A LITTLE SOMETHING FOR YOU
         </p>
 
+
         <h1>
+
             Welcome to the
             <span>Quote Garden.</span>
+
         </h1>
 
+
         <p>
-            Pick a quote, save your favourites
-            and find a little reminder for your day.
+
+            Pick a little reminder for your day,
+            save the ones you love and keep them close.
+
         </p>
 
     </section>
 
 
+
+    <!-- =================================================
+         QUOTE CAROUSEL
+    ================================================== -->
+
     <section class="quote-garden">
 
-        <div class="big-quote-card">
 
-            <span class="quote-mark">
-                “
-            </span>
+        <div class="quote-carousel">
 
-            <p
-                id="bigQuote"
-                class="big-quote">
 
-                You don't have to have
-                everything figured out today.
-
+            <p class="section-tag">
+                YOUR LITTLE REMINDER
             </p>
 
-            <span
-                id="quoteAuthor"
-                class="quote-author">
 
-                — A little reminder
-
-            </span>
+            <h2>
+                Pick a little piece of happiness.
+            </h2>
 
 
-            <button
-                class="button primary-button"
-                id="newQuote">
 
-                Another quote ✦
+            <!-- CARD -->
 
-            </button>
+            <div class="quote-card-area">
+
+
+                <!-- PREVIOUS -->
+
+                <button
+                    class="quote-arrow"
+                    id="previousQuote"
+                    aria-label="Previous quote">
+
+                    ←
+
+                </button>
+
+
+
+                <!-- QUOTE CARD -->
+
+                <div
+                    class="quote-card"
+                    id="quoteCard">
+
+
+                    <img
+                        id="quoteImage"
+                        src="QuotesImageAssets\Quote1.png"
+                        alt="Quote card">
+
+
+                    <div class="quote-card-overlay">
+
+
+                        <p
+                            id="cardQuote"
+                            class="card-quote">
+
+                            You don't have to have
+                            everything figured out today.
+
+                        </p>
+
+
+                        <p
+                            id="cardAuthor"
+                            class="card-author">
+
+                            — A little reminder
+
+                        </p>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- NEXT -->
+
+                <button
+                    class="quote-arrow"
+                    id="nextQuote"
+                    aria-label="Next quote">
+
+                    →
+
+                </button>
+
+
+            </div>
+
+
+
+            <!-- CONTROLS -->
+
+            <div class="quote-controls">
+
+
+                <button
+                    class="button primary-button"
+                    id="saveQuote">
+
+                    ♡ Save this one
+
+                </button>
+
+
+                <span id="quoteCounter">
+                    1 / 5
+                </span>
+
+
+            </div>
+
+
+            <p class="quote-swipe-hint">
+                ← Flick through your little reminders →
+            </p>
+
 
         </div>
 
 
+
+        <!-- =================================================
+             FAVOURITES
+        ================================================== -->
+
         <div class="saved-quotes">
+
 
             <div class="section-heading">
 
@@ -111,86 +248,157 @@
                     YOUR FAVOURITES
                 </p>
 
+
                 <h2>
                     Saved reminders.
                 </h2>
 
+
+                <p>
+                    Keep the little words that make
+                    your day brighter.
+                </p>
+
             </div>
+
 
 
             <div
                 id="savedQuotes"
                 class="saved-quotes-grid">
 
-                <div class="empty-quotes">
 
-                    <span>
-                        ♡
-                    </span>
-
-                    <p>
-                        Your favourite quotes
-                        will appear here.
-                    </p>
-
-                </div>
+                <!-- JavaScript puts saved cards here -->
 
             </div>
 
+
         </div>
 
+
     </section>
+
 
 </main>
 
 
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
 <footer>
+
 
     <div class="footer-main">
 
+
         <div class="footer-brand">
-            <h3>Perfect Day ✦</h3>
+
+            <h3>
+                Perfect Day ✦
+            </h3>
+
+
             <p>
                 A little corner of the internet
                 made just for you.
             </p>
+
         </div>
 
-        <div class="footer-column">
-            <h4>Explore</h4>
-            <a href="myday.html">My Day</a>
-            <a href="garden.html">Garden</a>
-            <a href="games.html">Games</a>
-            <a href="flowerpedia.html">Flowerpedia</a>
-        </div>
+
 
         <div class="footer-column">
-            <h4>Your Space</h4>
-            <a href="notes.html">Notes</a>
-            <a href="braindump.html">Brain Dump</a>
-            <a href="quotes.html">Quotes</a>
-            <a href="flashcards.html">Flashcards</a>
+
+            <h4>
+                Explore
+            </h4>
+
+
+            <a href="myday.html">
+                My Day
+            </a>
+
+
+            <a href="garden.html">
+                Garden
+            </a>
+
+
+            <a href="games.html">
+                Games
+            </a>
+
+
+            <a href="flowerpedia.html">
+                Flowerpedia
+            </a>
+
         </div>
+
+
+
+        <div class="footer-column">
+
+            <h4>
+                Your Space
+            </h4>
+
+
+            <a href="notes.html">
+                Notes
+            </a>
+
+
+            <a href="braindump.html">
+                Brain Dump
+            </a>
+
+
+            <a href="quotes.html">
+                Quotes
+            </a>
+
+
+            <a href="flashcards.html">
+                Flashcards
+            </a>
+
+        </div>
+
 
     </div>
 
 
+
     <div class="footer-bottom">
+
 
         <p>
             Made with ✦ for imperfectly perfect days.
         </p>
 
+
         <p>
             © 2026 Perfect Day
         </p>
 
+
     </div>
+
 
 </footer>
 
 
-<script src="Games.js"></script>
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="Quotes.js"></script>
+
 
 </body>
+
 </html>
