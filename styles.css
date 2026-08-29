@@ -1,13 +1,3 @@
-/* =========================================================
-   PERFECT DAY
-   Main Stylesheet
-   ========================================================= */
-
-
-/* =========================================================
-   COLOUR PALETTE
-   ========================================================= */
-
 :root {
     --prussian-blue: #0B132B;
     --space-indigo: #1C2541;
@@ -26,173 +16,110 @@
     --text-light: #EAF4F2;
 }
 
-
-/* =========================================================
-   RESET
-   ========================================================= */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 html {
     scroll-behavior: smooth;
 }
-
 body {
     font-family: "Shantell Sans", sans-serif;
     background: var(--cream);
     color: var(--prussian-blue);
     overflow-x: hidden;
 }
-
 a {
     text-decoration: none;
     color: inherit;
 }
-
 button {
     font-family: inherit;
 }
-
 img {
     max-width: 100%;
     display: block;
 }
-
-
-/* =========================================================
+/* ===================
    NAVIGATION
-   ========================================================= */
+   ================= */
 
 .navbar {
     position: fixed;
     top: 18px;
     left: 50%;
-
     transform: translateX(-50%);
-
     width: min(1180px, calc(100% - 40px));
-
     min-height: 68px;
-
     padding: 10px 22px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     background: rgba(11, 19, 43, 0.94);
-
     border: 2px solid rgba(111, 255, 233, 0.2);
-
     border-radius: 20px;
-
     box-shadow:
         0 15px 40px rgba(11, 19, 43, 0.18);
-
     z-index: 1000;
 }
-
-
 /* Logo */
-
 .logo {
     font-family: "Gentium Plus", serif;
-
     font-size: 1.55rem;
-
     font-weight: 700;
-
     color: white;
-
     letter-spacing: 0.3px;
 }
-
 .logo span {
     color: var(--neon-ice);
-
     margin-left: 4px;
 }
-
-
 /* Navigation */
-
 .nav-links {
     display: flex;
     align-items: center;
     gap: 5px;
 }
-
 .nav-links a {
     padding: 10px 14px;
-
     border-radius: 12px;
-
     color: #DDE8E7;
-
     font-size: 0.82rem;
-
     font-weight: 600;
-
     transition: 0.25s ease;
 }
-
 .nav-links a:hover {
     color: var(--neon-ice);
-
     background: rgba(91, 192, 190, 0.14);
 }
-
 .nav-links a.active {
     color: var(--prussian-blue);
-
     background: var(--neon-ice);
 }
-
-
-
 .menu-button {
     display: none;
-
     border: none;
-
     background: transparent;
-
     color: white;
-
     font-size: 1.4rem;
-
     cursor: pointer;
 }
-
-
-/* =========================================================
+/* ============
    HERO
-   ========================================================= */
-
+   ============= */
 .hero {
     min-height: 100vh;
-
     position: relative;
-
     overflow: hidden;
-
     display: grid;
-
     grid-template-columns: 1fr 1fr;
-
     align-items: center;
-
     gap: 50px;
-
     padding:
         150px
         max(6vw, 40px)
         90px;
-
     background:
         linear-gradient(
             135deg,
@@ -200,192 +127,117 @@ img {
             var(--space-indigo) 52%,
             var(--dusk-blue) 100%
         );
-
     color: white;
 }
-
-
 /* Decorative background circle */
-
 .hero::before {
     content: "";
-
     position: absolute;
-
     width: 500px;
     height: 500px;
-
     top: -230px;
     right: -130px;
-
     border-radius: 50%;
-
     background:
         rgba(91, 192, 190, 0.1);
 }
-
-
 /* Another decorative shape */
-
 .hero::after {
     content: "";
-
     position: absolute;
-
     width: 300px;
     height: 300px;
-
     bottom: -180px;
     left: -120px;
-
     border-radius: 50%;
-
     background:
         rgba(191, 171, 203, 0.12);
 }
-
-
 /* Hero content */
-
 .hero-content {
     position: relative;
     z-index: 5;
-
     max-width: 620px;
 }
-
-
 .small-title {
     display: inline-block;
-
     margin-bottom: 20px;
-
     color: var(--neon-ice);
-
     font-size: 0.68rem;
-
     font-weight: 700;
-
     letter-spacing: 2.5px;
 }
-
-
 .hero h1 {
     font-family: "Gentium Plus", serif;
-
     font-size: clamp(4rem, 7vw, 7rem);
-
     line-height: 0.9;
-
     font-weight: 700;
-
     letter-spacing: -3px;
 }
-
-
 .hero h1 span {
     display: block;
-
     color: var(--neon-ice);
-
     font-style: italic;
-
     margin-left: 55px;
-
     margin-top: 8px;
 }
-
-
 .hero-description {
     max-width: 520px;
-
     margin-top: 30px;
-
     color: #D3E1DF;
-
     font-size: 0.98rem;
-
     line-height: 1.8;
 }
-
-
-/* =========================================================
+/* ==========
    BUTTONS
-   ========================================================= */
-
+  ============== */
 .hero-buttons {
     display: flex;
-
     flex-wrap: wrap;
-
     gap: 12px;
-
     margin-top: 30px;
 }
-
-
 .button {
     display: inline-flex;
-
     align-items: center;
     justify-content: center;
-
     padding: 13px 21px;
-
     border-radius: 13px;
-
     font-size: 0.82rem;
-
     font-weight: 700;
-
     cursor: pointer;
-
     transition:
         transform 0.25s ease,
         box-shadow 0.25s ease,
         background 0.25s ease;
 }
-
-
 .primary-button {
     background: var(--neon-ice);
-
     color: var(--prussian-blue);
-
     box-shadow:
         0 10px 25px rgba(111, 255, 233, 0.16);
 }
-
 .primary-button:hover {
     transform: translateY(-3px);
-
     box-shadow:
         0 15px 30px rgba(111, 255, 233, 0.25);
 }
-
-
 .outline-button {
     color: white;
-
     border:
         1px solid
         rgba(255, 255, 255, 0.35);
-
     background:
         rgba(255, 255, 255, 0.07);
 }
-
 .outline-button:hover {
     transform: translateY(-3px);
-
     background:
         rgba(255, 255, 255, 0.14);
 }
-
-
-/* =========================================================
+/* ==================
    HERO NOTE
-   ========================================================= */
+   ================= */
 
 .hero-note {
     display: flex;
@@ -429,9 +281,9 @@ img {
 }
 
 
-/* =========================================================
+/* =====================
    HERO ART
-   ========================================================= */
+  ============== */
 
 .hero-art {
     height: 530px;
@@ -459,9 +311,9 @@ img {
 }
 
 
-/* =========================================================
+/* =========
    SUN
-   ========================================================= */
+   ============== */
 
 .sun {
     position: absolute;
@@ -493,9 +345,9 @@ img {
 }
 
 
-/* =========================================================
+/* ================
    CLOUDS
-   ========================================================= */
+   ============= */
 
 .cloud {
     position: absolute;
@@ -550,9 +402,9 @@ img {
 }
 
 
-/* =========================================================
+/* ===================
    STARS
-   ========================================================= */
+   ================ */
 
 .star {
     position: absolute;
@@ -612,9 +464,9 @@ img {
 }
 
 
-/* =========================================================
+/* ==================
    WELCOME CARD
-   ========================================================= */
+   =============== */
 
 .welcome-card {
     position: absolute;
@@ -730,9 +582,9 @@ img {
 }
 
 
-/* =========================================================
+/* ============
    HERO PLANTS
-   ========================================================= */
+  ==================== */
 
 .plant {
     position: absolute;
@@ -789,9 +641,9 @@ img {
 }
 
 
-/* =========================================================
+/* ==============
    GENERAL SECTIONS
-   ========================================================= */
+   ================== */
 
 .quick-section,
 .explore-section,
@@ -837,9 +689,9 @@ img {
 }
 
 
-/* =========================================================
+/* ===============
    QUICK ACCESS GRID
-   ========================================================= */
+   ================= */
 
 .quick-grid {
     max-width: 1150px;
@@ -1007,9 +859,9 @@ img {
 }
 
 
-/* =========================================================
+/* ===============
    MOOD SECTION
-   ========================================================= */
+   =================== */
 
 .mood-section {
     background:
@@ -1157,15 +1009,6 @@ img {
 
     font-size: 0.8rem;
 }
-/* =========================================================
-   QUOTES
-   ========================================================= */
-
-
-/* =========================================================
-   QUOTE GARDEN
-   ========================================================= */
-
 .quote-garden {
     max-width: 1000px;
 
@@ -1175,9 +1018,9 @@ img {
 }
 
 
-/* =========================================================
+/* ==============
    QUOTE CAROUSEL
-   ========================================================= */
+  =================== */
 
 .quote-carousel {
     text-align: center;
@@ -1192,12 +1035,6 @@ img {
 
     font-size: 2rem;
 }
-
-
-/* =========================================================
-   QUOTE CARD AREA
-   ========================================================= */
-
 .quote-card-area {
     display: flex;
 
@@ -1208,12 +1045,6 @@ img {
 
     margin-top: 25px;
 }
-
-
-/* =========================================================
-   QUOTE CARD
-   ========================================================= */
-
 .quote-card {
     width: 650px;
 
@@ -1243,13 +1074,7 @@ img {
         10px 12px 0 rgba(58, 80, 107, 0.12);
 
     overflow: hidden;
-}
-
-
-/* =========================================================
-   QUOTE MARK
-   ========================================================= */
-
+}/*Quote Mark*/
 .quote-card::before {
     content: "“";
 
@@ -1268,31 +1093,6 @@ img {
 
     opacity: 0.55;
 }
-
-
-/* =========================================================
-   QUOTE TEXT
-   ========================================================= */
-
-.card-quote {
-    max-width: 550px;
-
-    margin: 0 auto 20px;
-
-    font-family: "Gentium Plus", serif;
-
-    font-size: clamp(2rem, 4vw, 3.2rem);
-
-    line-height: 1.15;
-
-    color: white;
-}
-
-
-/* =========================================================
-   QUOTE AUTHOR
-   ========================================================= */
-
 .card-author {
     margin: 0;
 
@@ -1302,12 +1102,6 @@ img {
 
     font-size: 1rem;
 }
-
-
-/* =========================================================
-   QUOTE ARROWS
-   ========================================================= */
-
 .quote-arrow {
     width: 75px;
 
@@ -1339,11 +1133,9 @@ img {
 .quote-arrow:active {
     transform: scale(0.96);
 }
-
-
-/* =========================================================
+/* =========
    QUOTE CONTROLS
-   ========================================================= */
+ ================ */
 
 .quote-controls {
     display: flex;
@@ -1356,18 +1148,14 @@ img {
 
     margin-top: 25px;
 }
-
-
 .quote-controls span {
     color: var(--dusk-blue);
 
     font-size: 0.9rem;
 }
-
-
-/* =========================================================
+/* ==============
    SWIPE HINT
-   ========================================================= */
+  ===================== */
 
 .quote-swipe-hint {
     margin-top: 15px;
@@ -1378,22 +1166,16 @@ img {
 
     opacity: 0.7;
 }
-
-
-/* =========================================================
+/* ==========
    SAVED QUOTES
-   ========================================================= */
+  ================== */
 
 .saved-quotes {
     margin-top: 80px;
 }
-
-
 .section-heading {
     margin-bottom: 25px;
 }
-
-
 .section-heading h2 {
     margin-bottom: 8px;
 
@@ -1410,9 +1192,9 @@ img {
 }
 
 
-/* =========================================================
+/* ==========
    SAVED QUOTE GRID
-   ========================================================= */
+  ============ */
 
 .saved-quotes-grid {
     display: grid;
@@ -1421,12 +1203,6 @@ img {
 
     gap: 20px;
 }
-
-
-/* =========================================================
-   SAVED QUOTE CARDS
-   ========================================================= */
-
 .saved-quote-card {
     padding: 30px;
 
@@ -1449,7 +1225,6 @@ img {
     transform: translateY(-4px);
 }
 
-
 .saved-quote-card p {
     margin-bottom: 12px;
 
@@ -1459,8 +1234,6 @@ img {
 
     color: var(--prussian-blue);
 }
-
-
 .saved-quote-card span {
     color: var(--dusk-blue);
 
@@ -1468,12 +1241,6 @@ img {
 
     font-size: 0.9rem;
 }
-
-
-/* =========================================================
-   DELETE SAVED QUOTE
-   ========================================================= */
-
 .saved-quote-card button {
     position: absolute;
 
@@ -1490,12 +1257,6 @@ img {
 
     cursor: pointer;
 }
-
-
-/* =========================================================
-   EMPTY SAVED QUOTES
-   ========================================================= */
-
 .empty-quotes {
     grid-column: 1 / -1;
 
@@ -1509,8 +1270,6 @@ img {
 
     text-align: center;
 }
-
-
 .empty-quotes span {
     display: block;
 
@@ -1521,9 +1280,9 @@ img {
     font-size: 2.5rem;
 }
 
-/* =========================================================
+/* =============
    GARDEN
-   ========================================================= */
+   ================= */
 
 .garden-card {
     max-width: 1150px;
@@ -1551,18 +1310,12 @@ img {
         15px 18px 0
         rgba(11, 19, 43, 0.12);
 }
-
-
 .garden-info {
     padding: 55px;
 }
-
-
 .garden-info .section-tag {
     color: var(--neon-ice);
 }
-
-
 .garden-info h2 {
     font-family: "Gentium Plus", serif;
 
@@ -1570,8 +1323,6 @@ img {
 
     line-height: 0.95;
 }
-
-
 .garden-info h2 span {
     display: block;
 
@@ -1579,8 +1330,6 @@ img {
 
     font-style: italic;
 }
-
-
 .garden-info > p:not(.section-tag) {
     max-width: 440px;
 
@@ -1594,7 +1343,6 @@ img {
 
     font-size: 0.88rem;
 }
-
 
 /* Garden visual */
 
@@ -1619,7 +1367,6 @@ img {
         );
 }
 
-
 .big-plant {
     position: relative;
 
@@ -1632,7 +1379,6 @@ img {
     animation:
         floating 4s ease-in-out infinite;
 }
-
 
 .garden-ground {
     position: absolute;
@@ -1688,15 +1434,14 @@ img {
 }
 
 
-/* =========================================================
+/* ==========
    EXPLORE
-   ========================================================= */
+   ============== */
 
 .explore-section {
     background:
         #E9F1EF;
 }
-
 
 .explore-grid {
     max-width: 1050px;
@@ -1714,7 +1459,6 @@ img {
         2px solid
         var(--prussian-blue);
 }
-
 
 .explore-item {
     min-height: 170px;
@@ -1796,9 +1540,9 @@ img {
 }
 
 
-/* =========================================================
+/* ==========
    FINAL MESSAGE
-   ========================================================= */
+  ============== */
 
 .final-message {
     padding:
@@ -1856,9 +1600,9 @@ img {
 }
 
 
-/* =========================================================
+/* ===============
    FOOTER
-   ========================================================= */
+  ============= */
 
 footer {
     padding:
@@ -1970,9 +1714,9 @@ footer {
 }
 
 
-/* =========================================================
+/* ===============
    ANIMATIONS
-   ========================================================= */
+   ============= */
 
 @keyframes floating {
 
@@ -1985,205 +1729,7 @@ footer {
         transform: translateY(-10px);
     }
 }
-
-
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
-
-@media (max-width: 950px) {
-
-    .hero {
-        grid-template-columns: 1fr;
-
-        padding-top: 140px;
-    }
-
-    .hero-content {
-        max-width: 750px;
-
-        text-align: center;
-
-        margin: auto;
-    }
-
-    .hero-description {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .hero-buttons {
-        justify-content: center;
-    }
-
-    .hero-note {
-        margin-left: auto;
-        margin-right: auto;
-
-        text-align: left;
-    }
-
-    .hero-art {
-        width: min(600px, 100%);
-
-        margin: auto;
-    }
-
-
-    .mood-container {
-        grid-template-columns: 1fr;
-
-        text-align: center;
-    }
-
-    .mood-text > p:last-child {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-
-    .garden-card {
-        grid-template-columns: 1fr;
-    }
-
-    .garden-info {
-        text-align: center;
-    }
-
-    .garden-info > p:not(.section-tag) {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-
-    .footer-main {
-        grid-template-columns:
-            1fr 1fr;
-    }
-
-    .footer-brand {
-        grid-column: 1 / -1;
-    }
-}
-
-
-@media (max-width: 700px) {
-
-    .navbar {
-        width: calc(100% - 24px);
-
-        top: 12px;
-    }
-
-    .nav-links {
-        display: none;
-    }
-
-    .menu-button {
-        display: block;
-    }
-
-
-    .hero {
-        padding:
-            125px 22px
-            70px;
-    }
-
-    .hero h1 {
-        font-size: 4rem;
-
-        letter-spacing: -2px;
-    }
-
-    .hero h1 span {
-        margin-left: 0;
-    }
-
-    .hero-art {
-        height: 430px;
-    }
-
-    .welcome-card {
-        top: 120px;
-    }
-
-
-    .quick-grid {
-        grid-template-columns: 1fr;
-    }
-
-
-    .quick-section,
-    .explore-section,
-    .garden-section,
-    .mood-section {
-        padding:
-            80px 20px;
-    }
-
-
-    .mood-box {
-        padding: 20px 10px;
-    }
-
-    .mood {
-        width: 75px;
-    }
-
-
-    .garden-info {
-        padding: 40px 25px;
-    }
-
-    .garden-visual {
-        height: 380px;
-    }
-
-    .big-plant {
-        font-size: 7rem;
-    }
-
-
-    .explore-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .explore-item {
-        grid-template-columns:
-            35px 45px 1fr 20px;
-
-        padding: 20px;
-
-        min-height: 140px;
-    }
-
-
-    .footer-main {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-brand {
-        grid-column: auto;
-    }
-
-    .footer-bottom {
-        flex-direction: column;
-
-        text-align: center;
-    }
-
-}/* =========================================================
-   OTHER WEBPAGES
-   My Day • Notes • Brain Dump • Garden • Games
-   Flashcards • Flowerpedia • Quotes • Explore
-   ========================================================= */
-
-
-/* =========================================================
-   PAGE HERO
-   ========================================================= */
-
+/*Other webpages*/
 .page-hero {
     max-width: 1100px;
     margin: 0 auto;
@@ -2214,12 +1760,7 @@ footer {
     margin: 22px auto 0;
     color: var(--dusk-blue);
 }
-
-
-/* =========================================================
-   MY DAY
-   ========================================================= */
-
+/*My day*/
 .day-section {
     max-width: 1100px;
     margin: 0 auto;
@@ -2229,10 +1770,7 @@ footer {
     grid-template-columns: 0.8fr 1.4fr;
     gap: 25px;
 }
-
-
-/* Date card */
-
+/*Date card*/
 .date-card {
     min-height: 360px;
     padding: 40px;
@@ -2396,12 +1934,7 @@ footer {
 
     color: var(--prussian-blue);
 }
-
-
-/* =========================================================
-   MOOD / DAY CHECK-IN
-   ========================================================= */
-
+/*Mood/Day check in*/
 .day-mood-section {
     max-width: 1100px;
 
@@ -2479,12 +2012,7 @@ footer {
     font-size: 0.75rem;
     font-weight: 700;
 }
-
-
-/* =========================================================
-   JOURNAL / GRATITUDE
-   ========================================================= */
-
+/*Journal*/
 .gratitude-section {
     max-width: 1100px;
 
@@ -2553,12 +2081,7 @@ footer {
 .berry-card textarea {
     background: rgba(255, 255, 255, 0.9);
 }
-
-
-/* =========================================================
-   NOTES
-   ========================================================= */
-
+/*Notes*/
 .notes-section {
     max-width: 1100px;
 
@@ -2781,11 +2304,7 @@ footer {
     color: var(--prussian-blue);
     font-weight: bold;
 }
-
-/* =========================================================
-   BRAIN DUMP
-   ========================================================= */
-
+/*Brain Dump*/
 .brain-section {
     max-width: 950px;
 
@@ -2903,12 +2422,7 @@ footer {
 .brain-reminder p {
     color: #C9D7DA;
 }
-
-
-/* =========================================================
-   GARDEN PAGE
-   ========================================================= */
-
+/*Garden page*/
 .garden-page {
     max-width: 1100px;
 
@@ -2921,8 +2435,6 @@ footer {
 
     gap: 25px;
 }
-
-
 /* Garden scene */
 
 .garden-world {
@@ -3207,25 +2719,12 @@ footer {
 .garden-stats span {
     font-size: 0.75rem;
 }
-/* =========================================================
-   QUOTES
-   ========================================================= */
-
-/* =========================================================
-   QUOTE GARDEN
-   ========================================================= */
-
+/*Quotes*/
 .quote-garden {
     max-width: 1100px;
     margin: 0 auto;
     padding: 20px 30px 120px;
 }
-
-
-/* =========================================================
-   QUOTE CAROUSEL
-   ========================================================= */
-
 .quote-carousel {
     text-align: center;
 }
@@ -3236,12 +2735,7 @@ footer {
     color: var(--prussian-blue);
     font-size: 2rem;
 }
-
-
-/* =========================================================
-   QUOTE CARD AREA
-   ========================================================= */
-
+/*Quote card*/
 .quote-card-area {
     display: flex;
     align-items: center;
@@ -3249,12 +2743,6 @@ footer {
     gap: 35px;
     margin-top: 25px;
 }
-
-
-/* =========================================================
-   QUOTE CARD
-   ========================================================= */
-
 .quote-card {
     width: 650px;
     min-height: 420px;
@@ -3280,12 +2768,6 @@ footer {
 
     overflow: hidden;
 }
-
-
-/* =========================================================
-   QUOTE MARK
-   ========================================================= */
-
 .quote-card::before {
     content: "“";
 
@@ -3303,12 +2785,7 @@ footer {
 
     opacity: 0.7;
 }
-
-
-/* =========================================================
-   QUOTE TEXT
-   ========================================================= */
-
+/*Quote text*/
 .card-quote {
     max-width: 550px;
 
@@ -3325,12 +2802,6 @@ footer {
     position: relative;
     z-index: 2;
 }
-
-
-/* =========================================================
-   QUOTE AUTHOR
-   ========================================================= */
-
 .card-author {
     margin: 0;
 
@@ -3343,12 +2814,7 @@ footer {
     position: relative;
     z-index: 2;
 }
-
-
-/* =========================================================
-   QUOTE ARROWS
-   ========================================================= */
-
+/*Arrows*/
 .quote-arrow {
     width: 75px;
     height: 75px;
@@ -3372,1059 +2838,445 @@ footer {
 .quote-arrow:hover {
     transform: scale(1.08);
 }
-
 .quote-arrow:active {
     transform: scale(0.96);
 }
-
-
-/* =========================================================
+/* =================
    QUOTE CONTROLS
-   ========================================================= */
-
+   ======================== */
 .quote-controls {
     display: flex;
-
     align-items: center;
     justify-content: center;
-
     gap: 25px;
-
     margin-top: 25px;
 }
-
 .quote-controls span {
     color: var(--dusk-blue);
     font-size: 0.9rem;
 }
-
-
-/* =========================================================
+/* ====================
    SWIPE HINT
-   ========================================================= */
-
+   ============================= */
 .quote-swipe-hint {
     margin-top: 15px;
-
     color: var(--dusk-blue);
-
     font-size: 0.8rem;
-
     opacity: 0.7;
 }
-
-
-/* =========================================================
+/* ====================
    SAVED QUOTES
-   ========================================================= */
-
+   ============== */
 .saved-quotes {
     margin-top: 80px;
 }
-
 .section-heading {
     margin-bottom: 25px;
 }
-
 .section-heading h2 {
     margin-bottom: 8px;
-
     font-family: "Gentium Plus", serif;
-
     color: var(--prussian-blue);
-
     font-size: 2.2rem;
 }
-
 .section-heading p:last-child {
     color: var(--dusk-blue);
 }
-
-
-/* =========================================================
+/* ====================
    SAVED QUOTE GRID
-   ========================================================= */
-
+   ================= */
 .saved-quotes-grid {
     display: grid;
-
     grid-template-columns: repeat(2, 1fr);
-
     gap: 20px;
 }
-
-
-/* =========================================================
+/* ===============
    SAVED QUOTE CARDS
-   ========================================================= */
-
+   ================== */
 .saved-quote-card {
     padding: 30px;
-
     position: relative;
-
     border-radius: 20px;
-
     background: var(--soft-white);
-
     border: 2px solid rgba(58, 80, 107, 0.1);
-
     box-shadow:
         6px 7px 0 rgba(58, 80, 107, 0.1);
-
     transition: 0.2s ease;
 }
-
 .saved-quote-card:hover {
     transform: translateY(-4px);
 }
-
 .saved-quote-card p {
     margin-bottom: 12px;
-
     font-family: "Gentium Plus", serif;
-
     font-size: 1.4rem;
-
     color: var(--prussian-blue);
 }
-
 .saved-quote-card span {
     color: var(--dusk-blue);
-
     font-family: "Shantell Sans", sans-serif;
-
     font-size: 0.9rem;
 }
-
-
-/* =========================================================
+/* ==============
    DELETE SAVED QUOTE
-   ========================================================= */
-
+   ========================== */
 .saved-quote-card button {
     position: absolute;
-
     top: 12px;
     right: 12px;
-
     border: none;
-
     background: transparent;
-
     color: var(--vintage-berry);
-
     font-size: 1.1rem;
-
     cursor: pointer;
 }
-
-
-/* =========================================================
+/* =========
    EMPTY SAVED QUOTES
-   ========================================================= */
-
+   =============== */
 .empty-quotes {
     grid-column: 1 / -1;
-
     padding: 50px;
-
     border: 2px dashed var(--lilac);
-
     border-radius: 25px;
-
     color: var(--dusk-blue);
-
     text-align: center;
 }
-
 .empty-quotes span {
     display: block;
-
     margin-bottom: 8px;
-
     color: var(--vintage-berry);
-
     font-size: 2.5rem;
 }
-/* =========================================================
+/* ================
    EXPLORE PAGE
-   ========================================================= */
-
+   =================== */
 .explore-page {
     max-width: 1100px;
-
     margin: 0 auto;
-
     padding: 20px 30px 100px;
 }
-
 .explore-large-grid {
     display: grid;
-
     grid-template-columns: repeat(2, 1fr);
-
     gap: 20px;
 }
-
 .explore-large-card {
     min-height: 280px;
-
     padding: 35px;
-
     position: relative;
-
     overflow: hidden;
-
     border-radius: 26px;
-
     background: var(--soft-white);
-
     border: 2px solid transparent;
-
     box-shadow:
         8px 10px 0 rgba(58, 80, 107, 0.08);
-
     transition: 0.25s ease;
 }
-
 .explore-large-card:hover {
     transform: translateY(-6px);
-
     border-color: var(--tropical-teal);
 }
-
 .explore-large-card:nth-child(1) {
     background: var(--neon-ice);
 }
-
 .explore-large-card:nth-child(2) {
     background: var(--lilac);
 }
-
 .explore-large-card:nth-child(3) {
     background: var(--pacific-blue);
 }
-
 .explore-large-card:nth-child(4) {
     background: var(--vintage-berry);
     color: white;
 }
-
 .explore-large-card:nth-child(5) {
     background: var(--twilight-indigo);
     color: white;
 }
-
 .explore-large-card:nth-child(6) {
     background: var(--soft-white);
 }
-
 .explore-large-card:nth-child(7) {
     background: var(--tropical-teal);
 }
-
 .explore-large-card:nth-child(8) {
     background: #FAF8F3;
 }
-
 .explore-large-icon {
     position: absolute;
-
     top: 25px;
     right: 30px;
-
     font-size: 3.5rem;
 }
-
 .explore-large-card h2 {
     margin-bottom: 15px;
-
     font-family: "Gentium Plus", serif;
-
     font-size: 2.7rem;
     line-height: 1;
 }
-
 .explore-large-card > p:not(.section-tag) {
     max-width: 450px;
-
     margin-bottom: 25px;
 }
-
 .explore-link {
     font-weight: 800;
-
     text-decoration: underline;
 }
-
-
-/* =========================================================
-   RESPONSIVE — OTHER PAGES ONLY
-   ========================================================= */
-
-@media (max-width: 900px) {
-
-    .day-section,
-    .garden-page {
-        grid-template-columns: 1fr;
-    }
-
-    .day-mood-section {
-        margin-left: 30px;
-        margin-right: 30px;
-
-        flex-direction: column;
-
-        align-items: flex-start;
-    }
-
-    .gratitude-section {
-        grid-template-columns: 1fr;
-    }
-
-    .notes-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .notes-sidebar {
-        flex-direction: row;
-
-        overflow-x: auto;
-    }
-
-    .flower-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-
-@media (max-width: 650px) {
-
-    .page-hero {
-        padding:
-            65px 20px
-            45px;
-    }
-
-    .page-hero h1 {
-        font-size: 3.5rem;
-    }
-
-
-    .day-section,
-    .notes-section,
-    .garden-page,
-    .games-page,
-    .flowerpedia-page,
-    .quote-garden,
-    .explore-page {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-
-    .date-card,
-    .todo-card,
-    .journal-card,
-    .brain-section,
-    .garden-controls {
-        padding: 25px;
-    }
-
-
-    .day-mood-section {
-        margin-left: 20px;
-        margin-right: 20px;
-
-        padding: 30px 25px;
-    }
-
-
-    .day-moods {
-        width: 100%;
-    }
-
-    .day-mood {
-        width: 70px;
-        height: 80px;
-    }
-
-
-    .notes-grid,
-    .games-grid,
-    .flower-grid,
-    .saved-quotes-grid,
-    .explore-large-grid {
-        grid-template-columns: 1fr;
-    }
-
-
-    .garden-actions {
-        grid-template-columns: 1fr;
-    }
-
-
-    .garden-stats {
-        grid-template-columns: 1fr;
-    }
-
-
-    .garden-journal {
-        margin-left: 20px;
-        margin-right: 20px;
-
-        padding: 35px 20px;
-    }
-
-
-    .brain-header {
-        align-items: flex-start;
-    }
-
-    .brain-header h2 {
-        font-size: 2.4rem;
-    }
-
-    .brain-cloud {
-        font-size: 3rem;
-    }
-
-
-    .flashcard {
-        min-height: 380px;
-    }
-
-    .flashcard-front,
-    .flashcard-back {
-        padding: 30px;
-    }
-
-    .flashcard-front h2 {
-        font-size: 2.4rem;
-    }
-
-    .flashcard-back h2 {
-        font-size: 2.1rem;
-    }
-
-
-    .big-quote-card {
-        padding: 55px 25px;
-    }
-
-    .big-quote {
-        font-size: 2.2rem;
-    }
-
-    .quote-mark {
-        left: 12px;
-        font-size: 5rem;
-    }
-
-}
-/* =========================================================
+/* ==============
    MY DAY — TODO DELETE BUTTON
-   ========================================================= */
-
+   ====================== */
 .delete-todo {
     border: none;
     background: transparent;
-
     color: var(--vintage-berry);
-
     font-size: 1.2rem;
     font-weight: 700;
-
     cursor: pointer;
-
     padding: 3px 7px;
-
     border-radius: 50%;
-
     transition:
         background 0.2s ease,
         transform 0.2s ease;
 }
-
 .delete-todo:hover {
     background: rgba(146, 55, 77, 0.12);
     transform: scale(1.15);
 }
-/* =========================================================
+/* ============
    MY DAY — TODO CHECKBOXES
-   ========================================================= */
-
+==================== */
 .todo-item {
     display: flex;
     align-items: center;
     gap: 10px;
-
     flex: 1;
-
     cursor: pointer;
 }
-
-
 .todo-checkbox {
     width: 18px;
     height: 18px;
-
     accent-color: var(--tropical-teal);
-
     cursor: pointer;
 }
-
-
 .todo-item span {
     transition:
         color 0.2s ease,
         text-decoration 0.2s ease;
 }
-
-
 .todo-item span.completed {
     color: #89929d;
-
     text-decoration: line-through;
 }
-.reset-garden-button {
-    margin-top: 20px;
-
-    padding: 10px 18px;
-
-    border: 1px solid rgba(11, 19, 43, 0.2);
-    border-radius: 20px;
-
-    background: transparent;
-
-    color: var(--prussian-blue);
-
-    font-family: "Shantell Sans", sans-serif;
-    font-size: 0.8rem;
-    font-weight: 600;
-
-    cursor: pointer;
-
-    transition: all 0.2s ease;
-}
-
-.reset-garden-button:hover {
-    background: var(--prussian-blue);
-    color: white;
-
-    transform: translateY(-2px);
-}/* =========================================================
-   QUOTE GARDEN
-========================================================= */
-
-
-.quote-garden {
-    width: min(1150px, 90%);
-
-    margin: 0 auto;
-
-    padding: 70px 0 100px;
-}
-
-
-
-/* =========================================================
-   CAROUSEL
-========================================================= */
-
-
-.quote-carousel {
-    text-align: center;
-}
-
-
-.quote-carousel h2 {
-    margin-top: 10px;
-
-    margin-bottom: 40px;
-}
-
-
-
-/* =========================================================
-   CARD AREA
-========================================================= */
-
-
-.quote-card-area {
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    gap: 28px;
-
-}
-
-
-
-/* =========================================================
+/* ===============
    QUOTE CARD
-========================================================= */
-
-
+================== */
 .quote-card {
-
     position: relative;
-
     width: min(500px, 70vw);
-
     height: 600px;
-
     overflow: hidden;
-
     border-radius: 28px;
-
     background: #ffffff;
-
-    box-shadow:
-        0 20px 45px rgba(11, 19, 43, 0.18);
-
+    box-shadow: 0 20px 45px rgba(11, 19, 43, 0.18);
     touch-action: pan-y;
-
     user-select: none;
-
     transition:
         transform 0.25s ease,
         opacity 0.25s ease;
-
 }
-
-
-.quote-card img {
-
-    width: 100%;
-
-    height: 100%;
-
-    object-fit: cover;
-
-    display: block;
-
-}
-
-
-
-/* =========================================================
-   QUOTE OVERLAY
-========================================================= */
-
-
-.quote-card-overlay {
-
-    position: absolute;
-
-    left: 0;
-
-    right: 0;
-
-    bottom: 0;
-
-    padding: 100px 40px 40px;
-
-    text-align: left;
-
-    color: white;
-
-    background:
-        linear-gradient(
-            to bottom,
-            transparent,
-            rgba(11, 19, 43, 0.9)
-        );
-
-}
-
-
-.card-quote {
-
-    margin: 0 0 14px;
-
-    font-family:
-        "Gentium Plus",
-        serif;
-
-    font-size: 2rem;
-
-    line-height: 1.2;
-
-}
-
-
-.card-author {
-
-    margin: 0;
-
-    font-family:
-        "Shantell Sans",
-        sans-serif;
-
-    font-size: 0.9rem;
-
-}
-
-
-
-/* =========================================================
+/* =============
    CARD ANIMATION
-========================================================= */
-
-
+=================== */
 .quote-slide-next {
-
     animation:
         quoteNext 0.35s ease;
-
 }
-
-
 .quote-slide-previous {
-
     animation:
         quotePrevious 0.35s ease;
-
 }
-
-
 @keyframes quoteNext {
-
     0% {
-
         opacity: 0;
-
         transform:
             translateX(35px)
             rotate(2deg);
-
     }
-
     100% {
-
         opacity: 1;
-
         transform:
             translateX(0)
             rotate(0);
-
     }
-
 }
-
-
 @keyframes quotePrevious {
-
     0% {
-
         opacity: 0;
-
         transform:
             translateX(-35px)
             rotate(-2deg);
-
     }
-
     100% {
-
         opacity: 1;
-
         transform:
             translateX(0)
             rotate(0);
-
     }
-
 }
-
-
-
-/* =========================================================
+/* ====================
    ARROW BUTTONS
-========================================================= */
-
-
+===================== */
 .quote-arrow {
-
     width: 50px;
-
     height: 50px;
-
     flex-shrink: 0;
-
     border: none;
-
     border-radius: 50%;
-
     background: #5BC0BE;
-
     color: #0B132B;
-
     font-family:
         "Shantell Sans",
         sans-serif;
-
     font-size: 1.4rem;
-
     font-weight: 700;
-
     cursor: pointer;
-
     transition:
         transform 0.2s ease,
         box-shadow 0.2s ease;
-
 }
-
-
 .quote-arrow:hover {
-
     transform: scale(1.1);
-
     box-shadow:
         0 8px 20px
         rgba(11, 19, 43, 0.18);
-
 }
-
-
-
-/* =========================================================
+/* ============================
    CONTROLS
-========================================================= */
-
-
+=================== */
 .quote-controls {
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     gap: 25px;
-
     margin-top: 25px;
-
 }
-
-
 #quoteCounter {
-
     font-family:
         "Shantell Sans",
         sans-serif;
-
     font-size: 0.9rem;
-
     color: #34506B;
-
 }
-
-
 .quote-swipe-hint {
-
     margin-top: 18px;
-
     font-family:
         "Shantell Sans",
         sans-serif;
-
     font-size: 0.8rem;
-
     color: #34506B;
-
     opacity: 0.7;
-
 }
-
-
-
-/* =========================================================
+/* ====================
    SAVED QUOTES
-========================================================= */
-
-
+========================== */
 .saved-quotes {
-
     margin-top: 100px;
-
 }
-
-
 .saved-quotes .section-heading {
-
     margin-bottom: 30px;
-
 }
-
-
 .saved-quotes-grid {
-
     display: grid;
-
     grid-template-columns:
         repeat(
             auto-fit,
             minmax(230px, 1fr)
         );
-
     gap: 25px;
-
 }
-
-
-
-/* =========================================================
+/* =====================
    SAVED CARD
-========================================================= */
-
-
+============================= */
 .saved-quote-card {
-
     overflow: hidden;
-
     border-radius: 20px;
-
     background: #ffffff;
-
     box-shadow:
         0 10px 30px
         rgba(11, 19, 43, 0.1);
-
     transition:
         transform 0.2s ease,
         box-shadow 0.2s ease;
-
 }
-
-
 .saved-quote-card:hover {
-
     transform:
         translateY(-5px);
-
     box-shadow:
         0 15px 35px
         rgba(11, 19, 43, 0.15);
-
 }
-
-
 .saved-quote-card img {
-
     display: block;
-
     width: 100%;
-
     height: 230px;
-
     object-fit: cover;
-
 }
-
-
 .saved-quote-text {
-
     padding: 20px;
-
 }
-
-
 .saved-quote-text p {
-
     margin:
         0 0 10px;
-
     font-family:
         "Gentium Plus",
         serif;
-
     font-size: 1.15rem;
-
     line-height: 1.4;
-
 }
 .saved-quote-text span {
-
     font-family:
         "Shantell Sans",
         sans-serif;
-
     font-size: 0.8rem;
-
     color: #34506B;
-
 }
 /* =========================
    REMOVE BUTTON
 ================= */
 .remove-quote {
-
     display: block;
-
     margin-top: 15px;
-
     padding: 0;
-
     border: none;
-
     background: transparent;
-
     color: #92374D;
-
     font-family:
         "Shantell Sans",
         sans-serif;
-
     font-size: 0.8rem;
-
     cursor: pointer;
-
 }
 .remove-quote:hover {
-
     text-decoration: underline;
-
 }
 /* ============================
    EMPTY FAVOURITES
 ====================== */
 .empty-quotes {
-
     grid-column: 1 / -1;
-
     padding: 50px 20px;
-
     border-radius: 22px;
-
-    background:
-        rgba(255, 255, 255, 0.55);
-
+    background:rgba(255, 255, 255, 0.55);
     text-align: center;
-
 }
 .empty-quotes span {
-
     display: block;
-
     margin-bottom: 10px;
-
     font-size: 2rem;
-
 }
 .empty-quotes p {
-
     margin: 0;
-
     font-family:
         "Shantell Sans",
         sans-serif;
-
 }
