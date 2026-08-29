@@ -313,6 +313,7 @@ document.addEventListener("DOMContentLoaded", function () {
     updateGarden();
 
 });document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {document.addEventListener("DOMContentLoaded", function () {
 
     /* =====================================================
        GARDEN ELEMENTS
@@ -580,3 +581,5 @@ document.addEventListener("DOMContentLoaded", function () {
     updateGarden();
 
 });
+})
+})

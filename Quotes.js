@@ -1,188 +1,496 @@
+/* =========================================================
+   PERFECT DAY — QUOTE GARDEN
+========================================================= */
+
+
 document.addEventListener("DOMContentLoaded", function () {
 
-    // =========================================
-    // GET ELEMENTS FROM HTML
-    // =========================================
 
-    const quoteCards = document.querySelectorAll(".quote-card");
+    /* =====================================================
+       QUOTES
 
-    const previousButton = document.getElementById("previousQuote");
-    const nextButton = document.getElementById("nextQuote");
+       Change the image names to match your images.
+    ===================================================== */
 
-    const quoteCounter = document.getElementById("quoteCounter");
+    const quotes = [
 
-    const saveButton = document.getElementById("saveQuote");
-    const savedQuotesContainer = document.getElementById("savedQuotes");
+        {
+            image: "images/quote1.jpg",
+
+            quote:
+                "You don't have to have everything figured out today.",
+
+            author:
+                "— A little reminder"
+        },
 
 
-    // =========================================
-    // CURRENT QUOTE
-    // =========================================
+        {
+            image: "images/quote2.jpg",
+
+            quote:
+                "Small steps still take you somewhere.",
+
+            author:
+                "— Perfect Day"
+        },
+
+
+        {
+            image: "images/quote3.jpg",
+
+            quote:
+                "There is something lovely about simply being here.",
+
+            author:
+                "— A little reminder"
+        },
+
+
+        {
+            image: "images/quote4.jpg",
+
+            quote:
+                "Let today be enough.",
+
+            author:
+                "— Perfect Day"
+        },
+
+
+        {
+            image: "images/quote5.jpg",
+
+            quote:
+                "You are allowed to enjoy the little things.",
+
+            author:
+                "— A little reminder"
+        }
+
+    ];
+
+
+
+    /* =====================================================
+       GET HTML ELEMENTS
+    ===================================================== */
+
+    const quoteCard =
+        document.getElementById("quoteCard");
+
+
+    const quoteImage =
+        document.getElementById("quoteImage");
+
+
+    const cardQuote =
+        document.getElementById("cardQuote");
+
+
+    const cardAuthor =
+        document.getElementById("cardAuthor");
+
+
+    const quoteCounter =
+        document.getElementById("quoteCounter");
+
+
+    const previousQuote =
+        document.getElementById("previousQuote");
+
+
+    const nextQuote =
+        document.getElementById("nextQuote");
+
+
+    const saveQuote =
+        document.getElementById("saveQuote");
+
+
+    const savedQuotes =
+        document.getElementById("savedQuotes");
+
+
+
+    /* =====================================================
+       CURRENT CARD
+    ===================================================== */
 
     let currentQuote = 0;
 
 
-    // =========================================
-    // SHOW A QUOTE
-    // =========================================
 
-    function showQuote(index) {
+    /* =====================================================
+       SHOW QUOTE
+    ===================================================== */
 
-        // Hide every quote
-        quoteCards.forEach(function (card) {
-
-            card.classList.remove("active");
-
-        });
+    function showQuote(index, direction = "next") {
 
 
-        // Show the selected quote
-        quoteCards[index].classList.add("active");
+        const quote =
+            quotes[index];
 
 
-        // Update counter
-        quoteCounter.textContent =
-            (index + 1) + " / " + quoteCards.length;
+        /* Animation */
+
+        quoteCard.classList.remove(
+            "quote-slide-next",
+            "quote-slide-previous"
+        );
+
+
+        void quoteCard.offsetWidth;
+
+
+        if (direction === "next") {
+
+            quoteCard.classList.add(
+                "quote-slide-next"
+            );
+
+        } else {
+
+            quoteCard.classList.add(
+                "quote-slide-previous"
+            );
+
+        }
+
+
+        /* Change content */
+
+        setTimeout(function () {
+
+            quoteImage.src =
+                quote.image;
+
+            quoteImage.alt =
+                "Quote card " + (index + 1);
+
+
+            cardQuote.textContent =
+                quote.quote;
+
+
+            cardAuthor.textContent =
+                quote.author;
+
+
+            quoteCounter.textContent =
+                `${index + 1} / ${quotes.length}`;
+
+
+        }, 100);
+
 
     }
 
 
-    // =========================================
-    // NEXT BUTTON →
-    // =========================================
 
-    nextButton.addEventListener("click", function () {
+    /* =====================================================
+       NEXT
+    ===================================================== */
 
-        currentQuote = currentQuote + 1;
+    function nextCard() {
 
 
-        // If we reach the last quote,
-        // go back to the first one
+        currentQuote++;
 
-        if (currentQuote >= quoteCards.length) {
+
+        if (currentQuote >= quotes.length) {
 
             currentQuote = 0;
 
         }
 
 
-        showQuote(currentQuote);
+        showQuote(
+            currentQuote,
+            "next"
+        );
 
-    });
-
-
-    // =========================================
-    // PREVIOUS BUTTON ←
-    // =========================================
-
-    previousButton.addEventListener("click", function () {
-
-        currentQuote = currentQuote - 1;
+    }
 
 
-        // If we go before the first quote,
-        // go to the last quote
+
+    /* =====================================================
+       PREVIOUS
+    ===================================================== */
+
+    function previousCard() {
+
+
+        currentQuote--;
+
 
         if (currentQuote < 0) {
 
-            currentQuote = quoteCards.length - 1;
+            currentQuote =
+                quotes.length - 1;
 
         }
 
 
-        showQuote(currentQuote);
+        showQuote(
+            currentQuote,
+            "previous"
+        );
 
-    });
-
-
-    // =========================================
-    // SAVED QUOTES
-    // =========================================
-
-    let savedQuotes =
-        JSON.parse(
-            localStorage.getItem("perfectDayQuotes")
-        ) || [];
+    }
 
 
-    // =========================================
-    // SAVE CURRENT QUOTE
-    // =========================================
 
-    saveButton.addEventListener("click", function () {
+    /* =====================================================
+       BUTTONS
+    ===================================================== */
 
-        // Get the currently visible card
-        const currentCard =
-            quoteCards[currentQuote];
-
-
-        // Get its image
-        const image =
-            currentCard
-                .querySelector("img")
-                .getAttribute("src");
+    nextQuote.addEventListener(
+        "click",
+        nextCard
+    );
 
 
-        // Check if already saved
-        const alreadySaved =
-            savedQuotes.includes(image);
+    previousQuote.addEventListener(
+        "click",
+        previousCard
+    );
 
 
-        if (alreadySaved) {
 
-            saveButton.textContent =
-                "Already saved ♡";
+    /* =====================================================
+       KEYBOARD SUPPORT
+
+       Left arrow = previous
+       Right arrow = next
+    ===================================================== */
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+
+            if (event.key === "ArrowRight") {
+
+                nextCard();
+
+            }
+
+
+            if (event.key === "ArrowLeft") {
+
+                previousCard();
+
+            }
 
         }
+    );
+
+
+
+    /* =====================================================
+       SWIPE SUPPORT
+    ===================================================== */
+
+    let touchStartX = 0;
+
+    let touchEndX = 0;
+
+
+
+    quoteCard.addEventListener(
+        "touchstart",
+        function (event) {
+
+            touchStartX =
+                event.changedTouches[0].screenX;
+
+        },
+        { passive: true }
+    );
+
+
+
+    quoteCard.addEventListener(
+        "touchend",
+        function (event) {
+
+            touchEndX =
+                event.changedTouches[0].screenX;
+
+
+            handleSwipe();
+
+        },
+        { passive: true }
+    );
+
+
+
+    function handleSwipe() {
+
+
+        const distance =
+            touchEndX - touchStartX;
+
+
+        /* Ignore tiny movements */
+
+        if (Math.abs(distance) < 50) {
+
+            return;
+
+        }
+
+
+        /* Swipe left */
+
+        if (distance < 0) {
+
+            nextCard();
+
+        }
+
+
+        /* Swipe right */
 
         else {
 
-            // Add image to favourites
-            savedQuotes.push(image);
-
-
-            // Save it in browser storage
-            localStorage.setItem(
-                "perfectDayQuotes",
-                JSON.stringify(savedQuotes)
-            );
-
-
-            saveButton.textContent =
-                "Saved ♡";
-
-
-            // Refresh favourites
-            displaySavedQuotes();
+            previousCard();
 
         }
 
-
-        // Change button back after a moment
-        setTimeout(function () {
-
-            saveButton.textContent =
-                "♡ Save this one";
-
-        }, 1500);
-
-    });
+    }
 
 
-    // =========================================
-    // DISPLAY SAVED QUOTES
-    // =========================================
+
+    /* =====================================================
+       FAVOURITES
+    ===================================================== */
+
+
+    let favourites =
+        JSON.parse(
+            localStorage.getItem(
+                "perfectDayFavouriteQuotes"
+            )
+        ) || [];
+
+
+
+    /* =====================================================
+       SAVE FAVOURITES
+    ===================================================== */
+
+    function saveFavourites() {
+
+
+        localStorage.setItem(
+            "perfectDayFavouriteQuotes",
+            JSON.stringify(favourites)
+        );
+
+    }
+
+
+
+    /* =====================================================
+       SAVE CURRENT QUOTE
+    ===================================================== */
+
+    saveQuote.addEventListener(
+        "click",
+        function () {
+
+
+            const quote =
+                quotes[currentQuote];
+
+
+            const alreadySaved =
+                favourites.some(
+                    function (favourite) {
+
+                        return (
+                            favourite.image ===
+                            quote.image
+                        );
+
+                    }
+                );
+
+
+            if (alreadySaved) {
+
+
+                saveQuote.textContent =
+                    "Already saved ♡";
+
+
+                setTimeout(
+                    function () {
+
+                        saveQuote.textContent =
+                            "♡ Save this one";
+
+                    },
+                    1500
+                );
+
+
+                return;
+
+            }
+
+
+            /* Add favourite */
+
+            favourites.push(quote);
+
+
+            saveFavourites();
+
+
+            displaySavedQuotes();
+
+
+            /* Button feedback */
+
+            saveQuote.textContent =
+                "Saved ♡";
+
+
+            setTimeout(
+                function () {
+
+                    saveQuote.textContent =
+                        "♡ Save this one";
+
+                },
+                1500
+            );
+
+        }
+    );
+
+
+
+    /* =====================================================
+       DISPLAY SAVED QUOTES
+    ===================================================== */
 
     function displaySavedQuotes() {
 
-        // Clear current favourites
-        savedQuotesContainer.innerHTML = "";
+
+        savedQuotes.innerHTML = "";
 
 
-        // If there are no saved quotes
-        if (savedQuotes.length === 0) {
+        /* Nothing saved */
 
-            savedQuotesContainer.innerHTML = `
+        if (favourites.length === 0) {
+
+
+            savedQuotes.innerHTML = `
 
                 <div class="empty-quotes">
 
@@ -197,56 +505,77 @@ document.addEventListener("DOMContentLoaded", function () {
 
             `;
 
+
             return;
 
         }
 
 
-        // Create a card for every saved quote
-        savedQuotes.forEach(function (image, index) {
 
-            const savedCard =
-                document.createElement("div");
+        /* Create each saved card */
 
-
-            savedCard.className =
-                "saved-quote-card";
+        favourites.forEach(
+            function (quote, index) {
 
 
-            savedCard.innerHTML = `
-
-                <img
-                    src="${image}"
-                    alt="Saved quote">
+                const card =
+                    document.createElement("article");
 
 
-                <button
-                    class="remove-quote"
-                    data-index="${index}">
-
-                    Remove ♡
-
-                </button>
-
-            `;
+                card.className =
+                    "saved-quote-card";
 
 
-            savedQuotesContainer.appendChild(savedCard);
+                card.innerHTML = `
 
-        });
+                    <img
+                        src="${quote.image}"
+                        alt="Saved quote">
+
+
+                    <div class="saved-quote-text">
+
+                        <p>
+                            “${quote.quote}”
+                        </p>
+
+
+                        <span>
+                            ${quote.author}
+                        </span>
+
+
+                        <button
+                            class="remove-quote"
+                            data-index="${index}">
+
+                            Remove ♡
+
+                        </button>
+
+                    </div>
+
+                `;
+
+
+                savedQuotes.appendChild(card);
+
+            }
+        );
 
     }
 
 
-    // =========================================
-    // REMOVE A SAVED QUOTE
-    // =========================================
 
-    savedQuotesContainer.addEventListener(
+    /* =====================================================
+       REMOVE FAVOURITE
+    ===================================================== */
+
+    savedQuotes.addEventListener(
         "click",
         function (event) {
 
-            // Make sure the remove button was clicked
+
             if (
                 !event.target.classList.contains(
                     "remove-quote"
@@ -258,40 +587,36 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
 
-            // Find which quote was clicked
             const index =
                 Number(
                     event.target.dataset.index
                 );
 
 
-            // Remove it
-            savedQuotes.splice(index, 1);
-
-
-            // Update browser storage
-            localStorage.setItem(
-                "perfectDayQuotes",
-                JSON.stringify(savedQuotes)
+            favourites.splice(
+                index,
+                1
             );
 
 
-            // Refresh the favourites
+            saveFavourites();
+
+
             displaySavedQuotes();
 
         }
     );
 
 
-    // =========================================
-    // START THE PAGE
-    // =========================================
 
-    if (quoteCards.length > 0) {
+    /* =====================================================
+       INITIALISE
+    ===================================================== */
 
-        showQuote(currentQuote);
-
-    }
+    showQuote(
+        currentQuote,
+        "next"
+    );
 
 
     displaySavedQuotes();
