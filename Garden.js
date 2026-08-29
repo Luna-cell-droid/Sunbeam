@@ -1,4 +1,318 @@
+/* =========================================================
+   PERFECT DAY — GARDEN
+   ========================================================= */
+
 document.addEventListener("DOMContentLoaded", function () {
+
+    /* =====================================================
+       ELEMENTS
+       ===================================================== */
+
+    const gardenPlant =
+        document.getElementById("gardenPlant");
+
+    const plantStage =
+        document.getElementById("plantStage");
+
+    const plantMessage =
+        document.getElementById("plantMessage");
+
+    const growthNumber =
+        document.getElementById("growthNumber");
+
+    const growthProgress =
+        document.getElementById("growthProgress");
+
+    const gardenDays =
+        document.getElementById("gardenDays");
+
+    const gardenActions =
+        document.getElementById("gardenActions");
+
+    const gardenGrowth =
+        document.getElementById("gardenGrowth");
+
+
+
+    /* =====================================================
+       LOAD SAVED DATA
+       ===================================================== */
+
+    let growth =
+        Number(
+            localStorage.getItem("perfectDayGrowth")
+        ) || 0;
+
+
+    let actions =
+        Number(
+            localStorage.getItem("perfectDayActions")
+        ) || 0;
+
+
+    let days =
+        Number(
+            localStorage.getItem("perfectDayDays")
+        ) || 0;
+
+
+
+    /* =====================================================
+       PLANT STAGES
+       ===================================================== */
+
+    function updateGarden() {
+
+        /*
+            0 - 19     Tiny Seedling
+            20 - 49    Little Sprout
+            50 - 79    Growing Plant
+            80 - 99    Budding Flower
+            100+       Blooming Flower
+        */
+
+
+        if (growth < 20) {
+
+            gardenPlant.textContent = "🌱";
+
+            plantStage.textContent =
+                "Tiny Seedling";
+
+            plantMessage.textContent =
+                "Your little plant is waiting for some love.";
+
+        }
+
+        else if (growth < 50) {
+
+            gardenPlant.textContent = "🌿";
+
+            plantStage.textContent =
+                "Little Sprout";
+
+            plantMessage.textContent =
+                "Look! Your little plant is starting to grow.";
+
+        }
+
+        else if (growth < 80) {
+
+            gardenPlant.textContent = "🪴";
+
+            plantStage.textContent =
+                "Growing Plant";
+
+            plantMessage.textContent =
+                "Your plant is getting stronger every day.";
+
+        }
+
+        else if (growth < 100) {
+
+            gardenPlant.textContent = "🌷";
+
+            plantStage.textContent =
+                "Budding Flower";
+
+            plantMessage.textContent =
+                "A little flower is getting ready to bloom.";
+
+        }
+
+        else {
+
+            gardenPlant.textContent = "🌸";
+
+            plantStage.textContent =
+                "Blooming Flower";
+
+            plantMessage.textContent =
+                "You helped your little garden bloom!";
+
+        }
+
+
+
+        /* =================================================
+           GROWTH BAR
+           ================================================= */
+
+        const percentage =
+            Math.min(growth, 100);
+
+
+        growthNumber.textContent =
+            `${percentage} / 100`;
+
+
+        growthProgress.style.width =
+            `${percentage}%`;
+
+
+        gardenGrowth.textContent =
+            `${percentage}%`;
+
+
+        /* =================================================
+           STATS
+           ================================================= */
+
+        gardenActions.textContent =
+            actions;
+
+        gardenDays.textContent =
+            days;
+
+    }
+
+
+
+    /* =====================================================
+       CARE BUTTONS
+       ===================================================== */
+
+    const waterPlant =
+        document.getElementById("waterPlant");
+
+    const sunPlant =
+        document.getElementById("sunPlant");
+
+    const talkPlant =
+        document.getElementById("talkPlant");
+
+
+
+    /* WATER */
+
+    if (waterPlant) {
+
+        waterPlant.addEventListener(
+            "click",
+            function () {
+
+                growth += 2;
+                actions += 1;
+
+                saveGarden();
+
+                updateGarden();
+
+                showPlantMessage(
+                    "Your plant loved the water! 💧"
+                );
+
+            }
+        );
+
+    }
+
+
+
+    /* SUNLIGHT */
+
+    if (sunPlant) {
+
+        sunPlant.addEventListener(
+            "click",
+            function () {
+
+                growth += 2;
+                actions += 1;
+
+                saveGarden();
+
+                updateGarden();
+
+                showPlantMessage(
+                    "Your plant is enjoying the sunshine! ☀️"
+                );
+
+            }
+        );
+
+    }
+
+
+
+    /* TALK */
+
+    if (talkPlant) {
+
+        talkPlant.addEventListener(
+            "click",
+            function () {
+
+                growth += 1;
+                actions += 1;
+
+                saveGarden();
+
+                updateGarden();
+
+                showPlantMessage(
+                    "Your plant likes hearing from you. 💬"
+                );
+
+            }
+        );
+
+    }
+
+
+
+    /* =====================================================
+       SAVE
+       ===================================================== */
+
+    function saveGarden() {
+
+        localStorage.setItem(
+            "perfectDayGrowth",
+            growth
+        );
+
+        localStorage.setItem(
+            "perfectDayActions",
+            actions
+        );
+
+        localStorage.setItem(
+            "perfectDayDays",
+            days
+        );
+
+    }
+
+
+
+    /* =====================================================
+       TEMPORARY MESSAGE
+       ===================================================== */
+
+    function showPlantMessage(message) {
+
+        plantMessage.textContent =
+            message;
+
+
+        setTimeout(function () {
+
+            updateGarden();
+
+        }, 2000);
+
+    }
+
+
+
+    /* =====================================================
+       INITIAL DISPLAY
+       ===================================================== */
+
+    updateGarden();
+
+});document.addEventListener("DOMContentLoaded", function () {
 
     /* =====================================================
        GARDEN ELEMENTS

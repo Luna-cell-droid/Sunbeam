@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>My Day | Perfect Day</title>
+    <title>Little Notes | Perfect Day</title>
 
     <link rel="stylesheet" href="styles.css">
 
@@ -20,331 +20,196 @@
 
 <body>
 
-    <!-- NAVIGATION -->
+<header class="navbar">
 
-    <header class="navbar">
+    <a href="index.html" class="logo">
+        Perfect Day <span>✦</span>
+    </a>
 
-        <a href="index.html" class="logo">
-            Perfect Day <span>✦</span>
-        </a>
+    <nav class="nav-links">
 
-        <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="myday.html">My Day</a>
+        <a href="garden.html">Garden</a>
+        <a href="games.html">Games</a>
+        <a href="explore.html">Explore</a>
 
-            <a href="index.html">Home</a>
+    </nav>
 
-            <a href="myday.html" class="active">
-                My Day
-            </a>
+    <button class="menu-button">
+        ☰
+    </button>
 
-            <a href="garden.html">
-                Garden
-            </a>
+</header>
 
-            <a href="games.html">
-                Games
-            </a>
 
-            <a href="explore.html">
-                Explore
-            </a>
+<main>
 
-        </nav>
+    <section class="page-hero">
 
-        <button class="menu-button">
-            ☰
-        </button>
+        <p class="section-tag">
+            YOUR LITTLE NOTEBOOK
+        </p>
 
-    </header>
+        <h1>
+            Write it down.
+            <span>Don't let it disappear.</span>
+        </h1>
 
+        <p>
+            Keep your thoughts, ideas, reminders and
+            random little moments all in one place.
+        </p>
 
+    </section>
 
-    <main>
 
-        <!-- PAGE HERO -->
+    <section class="notes-section">
 
-        <section class="page-hero">
-
-            <p class="section-tag">
-                TODAY'S LITTLE ADVENTURE
-            </p>
-
-            <h1>
-                Make a plan.
-                <span>Make it yours.</span>
-            </h1>
-
-            <p>
-                You don't need to have everything figured out.
-                Just choose a few little things that would make
-                today feel good.
-            </p>
-
-        </section>
-
-
-
-        <!-- TODAY'S DATE -->
-
-        <section class="day-section">
-
-            <div class="date-card">
-
-                <p class="section-tag">
-                    TODAY
-                </p>
-
-                <h2 id="todayDate">
-                    A beautiful day
-                </h2>
-
-                <p>
-                    ✦ One day at a time.
-                </p>
-
-            </div>
-
-
-
-            <!-- TO DO -->
-
-            <div class="todo-card">
-
-                <div class="card-heading">
-
-                    <div>
-                        <p class="section-tag">
-                            LITTLE THINGS
-                        </p>
-
-                        <h2>
-                            Today's Plan
-                        </h2>
-                    </div>
-
-                    <span>
-                        ✎
-                    </span>
-
-                </div>
-
-
-                <div class="todo-input">
-
-                    <input
-                        type="text"
-                        id="todoInput"
-                        placeholder="Add something to your day...">
-
-                    <button id="addTodo">
-                        +
-                    </button>
-
-                </div>
-
-
-                <ul id="todoList">
-                    <!-- JavaScript adds tasks here -->
-                </ul>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- MOOD -->
-
-        <section class="day-mood-section">
-
-            <div>
-
-                <p class="section-tag">
-                    CHECK IN
-                </p>
-
-                <h2>
-                    How are you
-                    feeling today?
-                </h2>
-
-                <p>
-                    There is no wrong answer.
-                </p>
-
-            </div>
-
-
-            <div class="day-moods">
-
-                <button class="day-mood" data-mood="Amazing">
-                    ✨
-                    <span>Amazing</span>
-                </button>
-
-                <button class="day-mood" data-mood="Happy">
-                    ☀️
-                    <span>Happy</span>
-                </button>
-
-                <button class="day-mood" data-mood="Okay">
-                    🌱
-                    <span>Okay</span>
-                </button>
-
-                <button class="day-mood" data-mood="Tired">
-                    ☁️
-                    <span>Tired</span>
-                </button>
-
-                <button class="day-mood" data-mood="Rainy">
-                    🌧
-                    <span>Rainy</span>
-                </button>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- GRATITUDE -->
-
-        <section class="gratitude-section">
-
-            <div class="journal-card">
-
-                <p class="section-tag">
-                    LITTLE JOY
-                </p>
-
-                <h2>
-                    What made you
-                    smile today?
-                </h2>
-
-                <textarea
-                    id="gratitude"
-                    placeholder="It could be something tiny..."></textarea>
-
-                <button
-                    class="button primary-button"
-                    id="saveGratitude">
-
-                    Save this moment ✦
-
-                </button>
-
-            </div>
-
-
-            <div class="journal-card berry-card">
-
-                <p class="section-tag">
-                    REFLECTION
-                </p>
-
-                <h2>
-                    How was your day?
-                </h2>
-
-                <textarea
-                    id="dayReflection"
-                    placeholder="Write whatever comes to mind..."></textarea>
-
-                <button
-                    class="button primary-button"
-                    id="saveReflection">
-
-                    Keep this memory ♡
-
-                </button>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- END OF DAY -->
-
-        <section class="end-day">
-
-            <span>
-                ✿
-            </span>
+        <div class="notes-toolbar">
 
             <h2>
-                You made it through another day.
+                My Notes
             </h2>
 
-            <p>
-                That's something worth celebrating.
-            </p>
+            <button
+                class="button primary-button"
+                id="newNote">
 
-        </section>
+                + New Note
 
-    </main>
+            </button>
+
+        </div>
 
 
+        <div class="notes-layout">
 
-    <footer>
+            <aside class="notes-sidebar">
 
-        <div class="footer-main">
+                <button class="note-category active">
+                    ✦ All Notes
+                </button>
 
-            <div class="footer-brand">
+                <button class="note-category">
+                    📚 School
+                </button>
 
-                <h3>
-                    Perfect Day ✦
-                </h3>
+                <button class="note-category">
+                    💡 Ideas
+                </button>
 
-                <p>
-                    A little corner of the internet
-                    made just for you.
-                </p>
+                <button class="note-category">
+                    ♡ Memories
+                </button>
 
-            </div>
+                <button class="note-category">
+                    ✎ Random
+                </button>
 
-            <div class="footer-column">
+            </aside>
 
-                <h4>Explore</h4>
 
-                <a href="myday.html">My Day</a>
-                <a href="garden.html">Garden</a>
-                <a href="games.html">Games</a>
-                <a href="flowerpedia.html">Flowerpedia</a>
+            <div class="notes-grid" id="notesGrid">
 
-            </div>
+                <article class="note-card">
 
-            <div class="footer-column">
+                    <span class="note-date">
+                        TODAY
+                    </span>
 
-                <h4>Your Space</h4>
+                    <h3>
+                        A tiny thought
+                    </h3>
 
-                <a href="notes.html">Notes</a>
-                <a href="braindump.html">Brain Dump</a>
-                <a href="quotes.html">Quotes</a>
-                <a href="flashcards.html">Flashcards</a>
+                    <p>
+                        Sometimes the smallest moments
+                        end up being the ones we remember.
+                    </p>
+
+                    <button class="note-delete">
+                        ×
+                    </button>
+
+                </article>
+
+
+                <article class="note-card">
+
+                    <span class="note-date">
+                        IDEA
+                    </span>
+
+                    <h3>
+                        Website ideas
+                    </h3>
+
+                    <p>
+                        Add some more little things
+                        to make Perfect Day feel alive.
+                    </p>
+
+                    <button class="note-delete">
+                        ×
+                    </button>
+
+                </article>
 
             </div>
 
         </div>
 
-        <div class="footer-bottom">
+    </section>
 
+</main>
+
+
+<footer>
+
+    <div class="footer-main">
+
+        <div class="footer-brand">
+            <h3>Perfect Day ✦</h3>
             <p>
-                Made with ✦ for imperfectly perfect days.
+                A little corner of the internet
+                made just for you.
             </p>
-
-            <p>
-                © 2026 Perfect Day
-            </p>
-
         </div>
 
-    </footer>
+        <div class="footer-column">
+            <h4>Explore</h4>
+            <a href="myday.html">My Day</a>
+            <a href="garden.html">Garden</a>
+            <a href="games.html">Games</a>
+            <a href="flowerpedia.html">Flowerpedia</a>
+        </div>
+
+        <div class="footer-column">
+            <h4>Your Space</h4>
+            <a href="notes.html">Notes</a>
+            <a href="braindump.html">Brain Dump</a>
+            <a href="quotes.html">Quotes</a>
+            <a href="flashcards.html">Flashcards</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+            Made with ✦ for imperfectly perfect days.
+        </p>
+
+        <p>
+            © 2026 Perfect Day
+        </p>
+
+    </div>
+
+</footer>
 
 
-    <script src="Games.js"></script>
+<script src="Games.js"></script>
 
 </body>
-
 </html>

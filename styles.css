@@ -1,6 +1,6 @@
 /* =========================================================
    PERFECT DAY
-   HOMEPAGE STYLESHEET
+   Main Stylesheet
    ========================================================= */
 
 
@@ -12,21 +12,17 @@
     --prussian-blue: #0B132B;
     --space-indigo: #1C2541;
     --dusk-blue: #3A506B;
-
     --tropical-teal: #5BC0BE;
     --neon-ice: #6FFFE9;
 
     --vintage-berry: #92374D;
     --twilight-indigo: #1D3461;
     --pacific-blue: #64A6BD;
-
     --lilac: #BFABCB;
-
     --deep-space: #04395E;
 
     --cream: #F8F5EC;
     --soft-white: #FFFDF8;
-
     --text-light: #EAF4F2;
 }
 
@@ -75,9 +71,11 @@ img {
     position: fixed;
     top: 18px;
     left: 50%;
+
     transform: translateX(-50%);
 
     width: min(1180px, calc(100% - 40px));
+
     min-height: 68px;
 
     padding: 10px 22px;
@@ -86,9 +84,10 @@ img {
     align-items: center;
     justify-content: space-between;
 
-    background: rgba(11, 19, 43, 0.96);
+    background: rgba(11, 19, 43, 0.94);
 
     border: 2px solid rgba(111, 255, 233, 0.2);
+
     border-radius: 20px;
 
     box-shadow:
@@ -102,7 +101,9 @@ img {
 
 .logo {
     font-family: "Gentium Plus", serif;
+
     font-size: 1.55rem;
+
     font-weight: 700;
 
     color: white;
@@ -112,11 +113,12 @@ img {
 
 .logo span {
     color: var(--neon-ice);
+
     margin-left: 4px;
 }
 
 
-/* Navigation links */
+/* Navigation */
 
 .nav-links {
     display: flex;
@@ -132,28 +134,22 @@ img {
     color: #DDE8E7;
 
     font-size: 0.82rem;
+
     font-weight: 600;
 
-    transition:
-        color 0.25s ease,
-        background 0.25s ease,
-        transform 0.25s ease;
+    transition: 0.25s ease;
 }
 
 .nav-links a:hover {
     color: var(--neon-ice);
 
-    background:
-        rgba(91, 192, 190, 0.14);
+    background: rgba(91, 192, 190, 0.14);
 }
 
 .nav-links a.active {
     color: var(--prussian-blue);
 
     background: var(--neon-ice);
-
-    box-shadow:
-        0 5px 15px rgba(111, 255, 233, 0.12);
 }
 
 
@@ -163,6 +159,7 @@ img {
     display: none;
 
     border: none;
+
     background: transparent;
 
     color: white;
@@ -181,9 +178,11 @@ img {
     min-height: 100vh;
 
     position: relative;
+
     overflow: hidden;
 
     display: grid;
+
     grid-template-columns: 1fr 1fr;
 
     align-items: center;
@@ -207,18 +206,18 @@ img {
 }
 
 
-/* Decorative circle */
+/* Decorative background circle */
 
 .hero::before {
     content: "";
 
     position: absolute;
 
-    width: 520px;
-    height: 520px;
+    width: 500px;
+    height: 500px;
 
-    top: -260px;
-    right: -150px;
+    top: -230px;
+    right: -130px;
 
     border-radius: 50%;
 
@@ -227,18 +226,18 @@ img {
 }
 
 
-/* Decorative lower circle */
+/* Another decorative shape */
 
 .hero::after {
     content: "";
 
     position: absolute;
 
-    width: 330px;
-    height: 330px;
+    width: 300px;
+    height: 300px;
 
-    bottom: -200px;
-    left: -140px;
+    bottom: -180px;
+    left: -120px;
 
     border-radius: 50%;
 
@@ -247,16 +246,15 @@ img {
 }
 
 
-/* =========================================================
-   HERO CONTENT
-   ========================================================= */
+/* Hero content */
 
 .hero-content {
     position: relative;
-    z-index: 10;
+    z-index: 5;
 
     max-width: 620px;
 }
+
 
 .small-title {
     display: inline-block;
@@ -266,13 +264,12 @@ img {
     color: var(--neon-ice);
 
     font-size: 0.68rem;
-    font-weight: 800;
+
+    font-weight: 700;
 
     letter-spacing: 2.5px;
 }
 
-
-/* Main heading */
 
 .hero h1 {
     font-family: "Gentium Plus", serif;
@@ -286,19 +283,19 @@ img {
     letter-spacing: -3px;
 }
 
+
 .hero h1 span {
     display: block;
-
-    margin-left: 55px;
-    margin-top: 8px;
 
     color: var(--neon-ice);
 
     font-style: italic;
+
+    margin-left: 55px;
+
+    margin-top: 8px;
 }
 
-
-/* Description */
 
 .hero-description {
     max-width: 520px;
@@ -327,6 +324,7 @@ img {
     margin-top: 30px;
 }
 
+
 .button {
     display: inline-flex;
 
@@ -338,6 +336,7 @@ img {
     border-radius: 13px;
 
     font-size: 0.82rem;
+
     font-weight: 700;
 
     cursor: pointer;
@@ -349,28 +348,22 @@ img {
 }
 
 
-/* Primary button */
-
 .primary-button {
     background: var(--neon-ice);
 
     color: var(--prussian-blue);
 
     box-shadow:
-        0 10px 25px
-        rgba(111, 255, 233, 0.16);
+        0 10px 25px rgba(111, 255, 233, 0.16);
 }
 
 .primary-button:hover {
     transform: translateY(-3px);
 
     box-shadow:
-        0 15px 30px
-        rgba(111, 255, 233, 0.25);
+        0 15px 30px rgba(111, 255, 233, 0.25);
 }
 
-
-/* Outline button */
 
 .outline-button {
     color: white;
@@ -402,7 +395,7 @@ img {
 
     gap: 12px;
 
-    max-width: 410px;
+    max-width: 400px;
 
     margin-top: 40px;
 
@@ -448,8 +441,7 @@ img {
 
     overflow: hidden;
 
-    border-radius:
-        45% 45% 20px 20px;
+    border-radius: 45% 45% 20px 20px;
 
     background:
         linear-gradient(
@@ -495,8 +487,7 @@ img {
     font-size: 3.2rem;
 
     box-shadow:
-        0 0 40px
-        rgba(111, 255, 233, 0.35);
+        0 0 40px rgba(111, 255, 233, 0.35);
 
     animation:
         floating 5s ease-in-out infinite;
@@ -609,7 +600,6 @@ img {
 
 
 @keyframes twinkle {
-
     0%,
     100% {
         opacity: 0.4;
@@ -633,9 +623,7 @@ img {
     top: 145px;
     left: 50%;
 
-    transform:
-        translateX(-50%)
-        rotate(-2deg);
+    transform: translateX(-50%) rotate(-2deg);
 
     width: min(330px, 70%);
 
@@ -665,6 +653,7 @@ img {
     display: flex;
 
     justify-content: space-between;
+
     align-items: center;
 
     padding-bottom: 10px;
@@ -691,6 +680,7 @@ img {
     flex-direction: column;
 
     align-items: center;
+
     justify-content: center;
 
     text-align: center;
@@ -750,9 +740,9 @@ img {
 
     z-index: 10;
 
-    bottom: 100px;
-
     font-size: 2.8rem;
+
+    bottom: 100px;
 
     animation:
         floating 4s ease-in-out infinite;
@@ -787,6 +777,7 @@ img {
     position: absolute;
 
     left: -10%;
+
     bottom: -100px;
 
     width: 120%;
@@ -927,21 +918,25 @@ img {
 
 .card-blue {
     background: var(--pacific-blue);
+
     color: white;
 }
 
 .card-pink {
     background: var(--vintage-berry);
+
     color: white;
 }
 
 .card-green {
     background: var(--tropical-teal);
+
     color: var(--prussian-blue);
 }
 
 .card-yellow {
     background: var(--lilac);
+
     color: var(--prussian-blue);
 }
 
@@ -1032,8 +1027,7 @@ img {
 
     display: grid;
 
-    grid-template-columns:
-        0.8fr 1.2fr;
+    grid-template-columns: 0.8fr 1.2fr;
 
     align-items: center;
 
@@ -1049,8 +1043,7 @@ img {
 .mood-text h2 {
     font-family: "Gentium Plus", serif;
 
-    font-size:
-        clamp(2.8rem, 5vw, 4.5rem);
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
 
     line-height: 0.95;
 }
@@ -1111,10 +1104,7 @@ img {
 
     cursor: pointer;
 
-    transition:
-        transform 0.25s ease,
-        background 0.25s ease,
-        border-color 0.25s ease;
+    transition: 0.25s ease;
 }
 
 
@@ -1134,11 +1124,9 @@ img {
 
     color: var(--prussian-blue);
 
-    border-color:
-        var(--neon-ice);
+    border-color: var(--neon-ice);
 
-    transform:
-        translateY(-5px);
+    transform: translateY(-5px);
 }
 
 
@@ -1210,8 +1198,7 @@ img {
 
     font-family: "Gentium Plus", serif;
 
-    font-size:
-        clamp(2rem, 5vw, 4rem);
+    font-size: clamp(2rem, 5vw, 4rem);
 
     line-height: 1.1;
 
@@ -1222,9 +1209,7 @@ img {
 .quote-button {
     padding: 12px 20px;
 
-    border:
-        2px solid
-        var(--prussian-blue);
+    border: 2px solid var(--prussian-blue);
 
     border-radius: 12px;
 
@@ -1238,10 +1223,7 @@ img {
 
     cursor: pointer;
 
-    transition:
-        background 0.25s ease,
-        color 0.25s ease,
-        transform 0.25s ease;
+    transition: 0.25s ease;
 }
 
 
@@ -1267,8 +1249,7 @@ img {
 
     display: grid;
 
-    grid-template-columns:
-        0.9fr 1.1fr;
+    grid-template-columns: 0.9fr 1.1fr;
 
     align-items: center;
 
@@ -1300,8 +1281,7 @@ img {
 .garden-info h2 {
     font-family: "Gentium Plus", serif;
 
-    font-size:
-        clamp(2.8rem, 5vw, 4.5rem);
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
 
     line-height: 0.95;
 }
@@ -1331,9 +1311,7 @@ img {
 }
 
 
-/* =========================================================
-   GARDEN VISUAL
-   ========================================================= */
+/* Garden visual */
 
 .garden-visual {
     height: 500px;
@@ -1377,12 +1355,12 @@ img {
     bottom: -80px;
 
     width: 120%;
+
     height: 210px;
 
     border-radius: 50%;
 
-    background:
-        var(--dusk-blue);
+    background: var(--dusk-blue);
 }
 
 
@@ -1407,7 +1385,6 @@ img {
 
     bottom: 50px;
 }
-
 
 .flower-a {
     left: 15%;
@@ -1461,15 +1438,13 @@ img {
 
     display: grid;
 
-    grid-template-columns:
-        45px 50px 1fr 25px;
+    grid-template-columns: 45px 50px 1fr 25px;
 
     align-items: center;
 
     gap: 15px;
 
-    background:
-        var(--soft-white);
+    background: var(--soft-white);
 
     border:
         1px solid
@@ -1482,11 +1457,9 @@ img {
 
 
 .explore-item:hover {
-    background:
-        var(--neon-ice);
+    background: var(--neon-ice);
 
-    transform:
-        translateY(-3px);
+    transform: translateY(-3px);
 }
 
 
@@ -1497,8 +1470,7 @@ img {
 
     font-weight: 800;
 
-    color:
-        var(--vintage-berry);
+    color: var(--vintage-berry);
 }
 
 
@@ -1513,8 +1485,7 @@ img {
 
     border-radius: 50%;
 
-    background:
-        var(--lilac);
+    background: var(--lilac);
 
     font-size: 1.4rem;
 }
@@ -1525,8 +1496,7 @@ img {
 
     font-size: 1.5rem;
 
-    color:
-        var(--prussian-blue);
+    color: var(--prussian-blue);
 }
 
 
@@ -1567,8 +1537,7 @@ img {
 
     margin-bottom: 18px;
 
-    color:
-        var(--neon-ice);
+    color: var(--neon-ice);
 
     font-size: 2.2rem;
 }
@@ -1581,8 +1550,7 @@ img {
 
     font-family: "Gentium Plus", serif;
 
-    font-size:
-        clamp(3rem, 6vw, 5.5rem);
+    font-size: clamp(3rem, 6vw, 5.5rem);
 
     line-height: 0.95;
 }
@@ -1612,8 +1580,7 @@ footer {
         60px max(5vw, 30px)
         30px;
 
-    background:
-        var(--prussian-blue);
+    background: var(--prussian-blue);
 
     color: white;
 }
@@ -1638,8 +1605,7 @@ footer {
 
     font-size: 1.8rem;
 
-    color:
-        var(--neon-ice);
+    color: var(--neon-ice);
 }
 
 
@@ -1668,8 +1634,7 @@ footer {
 .footer-column h4 {
     margin-bottom: 7px;
 
-    color:
-        var(--tropical-teal);
+    color: var(--tropical-teal);
 
     font-size: 0.75rem;
 
@@ -1684,18 +1649,14 @@ footer {
 
     font-size: 0.75rem;
 
-    transition:
-        color 0.2s ease,
-        transform 0.2s ease;
+    transition: 0.2s ease;
 }
 
 
 .footer-column a:hover {
-    color:
-        var(--neon-ice);
+    color: var(--neon-ice);
 
-    transform:
-        translateX(3px);
+    transform: translateX(3px);
 }
 
 
@@ -1742,23 +1703,21 @@ footer {
 
 
 /* =========================================================
-   TABLET
+   RESPONSIVE
    ========================================================= */
 
 @media (max-width: 950px) {
-
-    /* Hero */
 
     .hero {
         grid-template-columns: 1fr;
 
         padding-top: 140px;
-
-        text-align: center;
     }
 
     .hero-content {
         max-width: 750px;
+
+        text-align: center;
 
         margin: auto;
     }
@@ -1786,8 +1745,6 @@ footer {
     }
 
 
-    /* Mood */
-
     .mood-container {
         grid-template-columns: 1fr;
 
@@ -1799,8 +1756,6 @@ footer {
         margin-right: auto;
     }
 
-
-    /* Garden */
 
     .garden-card {
         grid-template-columns: 1fr;
@@ -1816,36 +1771,23 @@ footer {
     }
 
 
-    /* Footer */
-
     .footer-main {
         grid-template-columns:
             1fr 1fr;
     }
 
     .footer-brand {
-        grid-column:
-            1 / -1;
+        grid-column: 1 / -1;
     }
 }
 
 
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
 @media (max-width: 700px) {
 
-    /* Navbar */
-
     .navbar {
-        width:
-            calc(100% - 24px);
+        width: calc(100% - 24px);
 
         top: 12px;
-
-        padding:
-            9px 15px;
     }
 
     .nav-links {
@@ -1856,8 +1798,6 @@ footer {
         display: block;
     }
 
-
-    /* Hero */
 
     .hero {
         padding:
@@ -1884,14 +1824,10 @@ footer {
     }
 
 
-    /* Quick access */
-
     .quick-grid {
         grid-template-columns: 1fr;
     }
 
-
-    /* Sections */
 
     .quick-section,
     .explore-section,
@@ -1902,11 +1838,8 @@ footer {
     }
 
 
-    /* Mood */
-
     .mood-box {
-        padding:
-            20px 10px;
+        padding: 20px 10px;
     }
 
     .mood {
@@ -1914,11 +1847,8 @@ footer {
     }
 
 
-    /* Garden */
-
     .garden-info {
-        padding:
-            40px 25px;
+        padding: 40px 25px;
     }
 
     .garden-visual {
@@ -1929,8 +1859,6 @@ footer {
         font-size: 7rem;
     }
 
-
-    /* Explore */
 
     .explore-grid {
         grid-template-columns: 1fr;
@@ -1946,8 +1874,6 @@ footer {
     }
 
 
-    /* Footer */
-
     .footer-main {
         grid-template-columns: 1fr;
     }
@@ -1961,65 +1887,8 @@ footer {
 
         text-align: center;
     }
-}
 
-
-/* =========================================================
-   SMALL MOBILE
-   ========================================================= */
-
-@media (max-width: 430px) {
-
-    .logo {
-        font-size: 1.3rem;
-    }
-
-    .hero h1 {
-        font-size: 3.3rem;
-    }
-
-    .hero-description {
-        font-size: 0.85rem;
-    }
-
-    .hero-art {
-        height: 390px;
-    }
-
-    .welcome-card {
-        width: 78%;
-    }
-
-    .welcome-card .card-middle {
-        min-height: 150px;
-    }
-
-    .card-middle p {
-        font-size: 1.15rem;
-    }
-
-    .sun {
-        width: 65px;
-        height: 65px;
-
-        font-size: 2.4rem;
-    }
-
-    .quick-card {
-        min-height: 210px;
-    }
-
-    .quote-section {
-        padding:
-            90px 20px;
-    }
-
-    .final-message {
-        padding:
-            100px 20px;
-    }
-}
-/* =========================================================
+}/* =========================================================
    OTHER WEBPAGES
    My Day • Notes • Brain Dump • Garden • Games
    Flashcards • Flowerpedia • Quotes • Explore
@@ -2060,106 +1929,54 @@ footer {
     margin: 22px auto 0;
     color: var(--dusk-blue);
 }
-/* =========================================================
-   MY DAY PAGE
-   ========================================================= */
-
-
-/* ---------- PAGE INTRO ---------- */
-
-.page-hero {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 85px 30px 55px;
-    text-align: center;
-}
-
-.page-hero .section-tag {
-    margin-bottom: 15px;
-    color: var(--vintage-berry);
-}
-
-.page-hero h1 {
-    margin: 0;
-    color: var(--prussian-blue);
-    font-family: "Gentium Plus", serif;
-    font-size: clamp(3.5rem, 7vw, 6rem);
-    line-height: 0.95;
-}
-
-.page-hero h1 span {
-    display: block;
-    color: var(--vintage-berry);
-    font-style: italic;
-}
-
-.page-hero > p:last-child {
-    max-width: 650px;
-    margin: 25px auto 0;
-    color: var(--dusk-blue);
-    font-size: 1.05rem;
-    line-height: 1.7;
-}
 
 
 /* =========================================================
-   TODAY + TO-DO
+   MY DAY
    ========================================================= */
 
 .day-section {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 20px 30px 75px;
+    padding: 20px 30px 80px;
 
     display: grid;
-    grid-template-columns: 0.75fr 1.25fr;
+    grid-template-columns: 0.8fr 1.4fr;
     gap: 25px;
 }
 
 
-/* ---------- DATE CARD ---------- */
+/* Date card */
 
 .date-card {
-    min-height: 390px;
+    min-height: 360px;
     padding: 40px;
-
-    position: relative;
-    overflow: hidden;
 
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+
+    position: relative;
+    overflow: hidden;
 
     border-radius: 28px;
 
     background: var(--twilight-indigo);
     color: white;
 
-    box-shadow: 8px 10px 0 rgba(11, 19, 43, 0.12);
+    box-shadow:
+        12px 15px 0 rgba(11, 19, 43, 0.12);
 }
 
 .date-card::before {
     content: "☀";
-    position: absolute;
 
+    position: absolute;
     top: 25px;
     right: 30px;
 
     color: var(--neon-ice);
-    font-size: 4.5rem;
-}
-
-.date-card::after {
-    content: "✦  ✧  ✦";
-
-    position: absolute;
-
-    top: 95px;
-    right: 35px;
-
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 1rem;
-    letter-spacing: 8px;
+    font-size: 4rem;
 }
 
 .date-card .section-tag {
@@ -2167,61 +1984,50 @@ footer {
 }
 
 .date-card h2 {
-    max-width: 300px;
-    margin: 12px 0;
+    margin: 10px 0;
 
     font-family: "Gentium Plus", serif;
-    font-size: clamp(2.5rem, 4vw, 4rem);
-    line-height: 0.95;
+    font-size: 3rem;
+    line-height: 1;
 }
 
-.date-card > p:last-child {
-    margin-top: 10px;
-    color: #dce7e8;
+.date-card p {
+    color: #D8E3E4;
 }
 
 
-/* ---------- TO-DO CARD ---------- */
+/* Todo card */
 
 .todo-card {
-    min-height: 390px;
     padding: 35px;
 
     border-radius: 28px;
 
     background: var(--soft-white);
 
-    border: 2px solid rgba(58, 80, 107, 0.1);
+    border: 2px solid rgba(58, 80, 107, 0.12);
 
-    box-shadow: 8px 10px 0 rgba(58, 80, 107, 0.08);
+    box-shadow:
+        8px 10px 0 rgba(58, 80, 107, 0.08);
 }
 
 .card-heading {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
 
     margin-bottom: 25px;
 }
 
-.card-heading .section-tag {
-    margin-bottom: 4px;
-    color: var(--vintage-berry);
-}
-
 .card-heading h2 {
-    margin: 0;
-
-    color: var(--prussian-blue);
-
     font-family: "Gentium Plus", serif;
-    font-size: 2.6rem;
-    line-height: 1;
+    font-size: 2.5rem;
+    color: var(--prussian-blue);
 }
 
 .card-heading > span {
-    width: 48px;
-    height: 48px;
+    width: 45px;
+    height: 45px;
 
     display: grid;
     place-items: center;
@@ -2229,42 +2035,31 @@ footer {
     border-radius: 50%;
 
     background: var(--lilac);
-
     color: var(--prussian-blue);
-
-    font-size: 1.3rem;
 }
 
 
-/* ---------- TODO INPUT ---------- */
+/* Todo input */
 
 .todo-input {
     display: flex;
     gap: 10px;
 
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 }
 
 .todo-input input {
-    min-width: 0;
     flex: 1;
 
-    padding: 14px 18px;
+    padding: 13px 18px;
 
-    border: 2px solid #d8d1df;
+    border: 2px solid var(--lilac);
     border-radius: 30px;
 
     outline: none;
 
-    background: #faf8f3;
-
+    background: #FAF8F3;
     color: var(--prussian-blue);
-
-    font-family: "Shantell Sans", sans-serif;
-}
-
-.todo-input input::placeholder {
-    color: #89929d;
 }
 
 .todo-input input:focus {
@@ -2272,8 +2067,6 @@ footer {
 }
 
 .todo-input button {
-    flex-shrink: 0;
-
     width: 48px;
     height: 48px;
 
@@ -2283,525 +2076,43 @@ footer {
     background: var(--vintage-berry);
     color: white;
 
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 
     cursor: pointer;
 
-    transition: transform 0.2s ease,
-                background 0.2s ease;
+    transition: 0.2s ease;
 }
 
 .todo-input button:hover {
     transform: rotate(90deg);
-    background: var(--prussian-blue);
 }
 
 
-/* ---------- TODO LIST ---------- */
+/* Todo list */
 
 #todoList {
-    margin: 0;
-    padding: 0;
-
     list-style: none;
 
     display: flex;
     flex-direction: column;
-    gap: 9px;
+    gap: 10px;
 }
 
 #todoList li {
-    min-height: 45px;
-
-    padding: 11px 15px;
+    padding: 13px 16px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    border-radius: 12px;
+    background: #F1EEF5;
 
-    background: #f0edf3;
-
-    color: var(--prussian-blue);
-
-    font-size: 0.9rem;
-}
-
-
-/* =========================================================
-   MOOD CHECK-IN
-   ========================================================= */
-
-.day-mood-section {
-    max-width: 1100px;
-
-    margin: 0 auto 75px;
-    padding: 45px;
-
-    border-radius: 28px;
-
-    background: var(--pacific-blue);
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 45px;
-}
-
-.day-mood-section > div:first-child {
-    flex: 1;
-}
-
-.day-mood-section .section-tag {
-    color: var(--deep-space);
-}
-
-.day-mood-section h2 {
-    max-width: 500px;
-
-    margin: 8px 0 10px;
+    border-radius: 13px;
 
     color: var(--prussian-blue);
-
-    font-family: "Gentium Plus", serif;
-    font-size: clamp(2.5rem, 4vw, 3.7rem);
-    line-height: 0.98;
-}
-
-.day-mood-section > div:first-child > p:last-child {
-    color: var(--deep-space);
 }
 
 
-/* ---------- MOODS ---------- */
-
-.day-moods {
-    flex: 1;
-
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-
-    gap: 10px;
-}
-
-.day-mood {
-    min-height: 105px;
-
-    padding: 12px 7px;
-
-    border: 2px solid transparent;
-    border-radius: 18px;
-
-    background: var(--soft-white);
-
-    color: var(--prussian-blue);
-
-    font-family: "Shantell Sans", sans-serif;
-
-    cursor: pointer;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    gap: 7px;
-
-    transition:
-        transform 0.2s ease,
-        border-color 0.2s ease,
-        box-shadow 0.2s ease;
-}
-
-.day-mood:hover {
-    transform: translateY(-6px);
-
-    border-color: var(--prussian-blue);
-
-    box-shadow: 0 7px 0 rgba(11, 19, 43, 0.1);
-}
-
-.day-mood.selected {
-    transform: translateY(-5px);
-
-    border-color: var(--vintage-berry);
-
-    box-shadow: 0 6px 0 rgba(146, 55, 77, 0.18);
-
-    background: #fffaf8;
-}
-
-.day-mood:first-child {
-    font-size: 1.6rem;
-}
-
-.day-mood:nth-child(2) {
-    font-size: 1.6rem;
-}
-
-.day-mood:nth-child(3) {
-    font-size: 1.6rem;
-}
-
-.day-mood:nth-child(4) {
-    font-size: 1.6rem;
-}
-
-.day-mood:nth-child(5) {
-    font-size: 1.6rem;
-}
-
-.day-mood span {
-    font-size: 0.7rem;
-    font-weight: 700;
-}
-
-
-/* =========================================================
-   GRATITUDE + REFLECTION
-   ========================================================= */
-
-.gratitude-section {
-    max-width: 1100px;
-
-    margin: 0 auto 80px;
-    padding: 0 30px;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
-    gap: 25px;
-}
-
-.journal-card {
-    padding: 38px;
-
-    border-radius: 28px;
-
-    background: var(--neon-ice);
-
-    color: var(--prussian-blue);
-
-    box-shadow: 7px 9px 0 rgba(58, 80, 107, 0.08);
-}
-
-.journal-card .section-tag {
-    margin-bottom: 8px;
-
-    color: var(--deep-space);
-}
-
-.journal-card h2 {
-    max-width: 430px;
-
-    margin: 0 0 22px;
-
-    font-family: "Gentium Plus", serif;
-    font-size: 2.6rem;
-    line-height: 1;
-}
-
-.journal-card textarea {
-    width: 100%;
-    min-height: 155px;
-
-    box-sizing: border-box;
-
-    padding: 17px;
-
-    resize: vertical;
-
-    border: 2px solid rgba(11, 19, 43, 0.15);
-    border-radius: 15px;
-
-    outline: none;
-
-    background: rgba(255, 255, 255, 0.78);
-
-    color: var(--prussian-blue);
-
-    font-family: "Shantell Sans", sans-serif;
-    font-size: 0.9rem;
-    line-height: 1.6;
-}
-
-.journal-card textarea:focus {
-    border-color: var(--prussian-blue);
-}
-
-.journal-card textarea::placeholder {
-    color: #71818b;
-}
-
-
-/* ---------- BERRY CARD ---------- */
-
-.journal-card.berry-card {
-    background: var(--vintage-berry);
-    color: white;
-}
-
-.berry-card .section-tag {
-    color: var(--neon-ice);
-}
-
-.berry-card textarea {
-    background: rgba(255, 255, 255, 0.92);
-}
-
-
-/* ---------- BUTTONS ---------- */
-
-.journal-card .button {
-    margin-top: 15px;
-}
-
-.journal-card .primary-button {
-    border: none;
-
-    padding: 12px 20px;
-
-    border-radius: 30px;
-
-    background: var(--prussian-blue);
-
-    color: white;
-
-    font-family: "Shantell Sans", sans-serif;
-    font-weight: 700;
-
-    cursor: pointer;
-
-    transition:
-        transform 0.2s ease,
-        background 0.2s ease;
-}
-
-.journal-card .primary-button:hover {
-    transform: translateY(-3px);
-
-    background: var(--deep-space);
-}
-
-.berry-card .primary-button {
-    background: var(--neon-ice);
-    color: var(--prussian-blue);
-}
-
-
-/* =========================================================
-   END OF DAY
-   ========================================================= */
-
-.end-day {
-    max-width: 1000px;
-
-    margin: 0 auto 100px;
-    padding: 65px 35px;
-
-    border-radius: 30px;
-
-    background: var(--space-indigo);
-
-    color: white;
-
-    text-align: center;
-
-    box-shadow: 10px 12px 0 rgba(11, 19, 43, 0.12);
-}
-
-.end-day > span {
-    display: block;
-
-    margin-bottom: 10px;
-
-    color: var(--neon-ice);
-
-    font-size: 2.5rem;
-}
-
-.end-day h2 {
-    margin: 0;
-
-    font-family: "Gentium Plus", serif;
-    font-size: clamp(2.3rem, 5vw, 4rem);
-    line-height: 1;
-}
-
-.end-day p {
-    margin-top: 15px;
-
-    color: #d1dcdf;
-}
-/* =========================================================
-   MY DAY — TODO DELETE BUTTON
-   ========================================================= */
-
-.delete-todo {
-    border: none;
-    background: transparent;
-
-    color: var(--vintage-berry);
-
-    font-size: 1.2rem;
-    font-weight: 700;
-
-    cursor: pointer;
-
-    padding: 3px 7px;
-
-    border-radius: 50%;
-
-    transition:
-        background 0.2s ease,
-        transform 0.2s ease;
-}
-
-.delete-todo:hover {
-    background: rgba(146, 55, 77, 0.12);
-    transform: scale(1.15);
-}
-/* =========================================================
-   MY DAY — TODO CHECKBOXES
-   ========================================================= */
-.todo-item{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex: 1;
-    cursor: pointer;
-}
-.todo-checkbox{
-    width: 18px;
-    height: 18px;
-    accent-color: var(--tropical-teal);
-    cursor: pointer;
-}
-.todo-item span{
-    transition: 
-    color 0.2s ease,
-    text-decoration 0.2s ease;
-}
-.todo-item span.completed{
-    color: #89929d;
-    text-decoration: line-through;
-}
-/* =========================================================
-   MY DAY RESPONSIVE
-   ========================================================= */
-
-@media (max-width: 950px) {
-
-    .day-section {
-        grid-template-columns: 1fr;
-    }
-
-    .date-card,
-    .todo-card {
-        min-height: auto;
-    }
-
-    .day-mood-section {
-        margin-left: 30px;
-        margin-right: 30px;
-
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .day-moods {
-        width: 100%;
-    }
-}
-
-
-@media (max-width: 700px) {
-
-    .page-hero {
-        padding: 60px 20px 45px;
-    }
-
-    .page-hero h1 {
-        font-size: 3.5rem;
-    }
-
-    .day-section {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .date-card {
-        min-height: 300px;
-        padding: 30px;
-    }
-
-    .date-card h2 {
-        font-size: 3rem;
-    }
-
-    .todo-card {
-        padding: 28px 22px;
-    }
-
-    .card-heading h2 {
-        font-size: 2.2rem;
-    }
-
-    .day-mood-section {
-        margin-left: 20px;
-        margin-right: 20px;
-
-        padding: 30px 22px;
-    }
-
-    .day-mood-section h2 {
-        font-size: 2.7rem;
-    }
-
-    .day-moods {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .gratitude-section {
-        grid-template-columns: 1fr;
-
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .journal-card {
-        padding: 30px 25px;
-    }
-
-    .journal-card h2 {
-        font-size: 2.3rem;
-    }
-
-    .end-day {
-        margin-left: 20px;
-        margin-right: 20px;
-
-        padding: 50px 25px;
-    }
-}
-
-
-@media (max-width: 450px) {
-
-    .day-moods {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .todo-input {
-        align-items: center;
-    }
-
-    .todo-input input {
-        width: 100%;
-    }
-}
 /* =========================================================
    MOOD / DAY CHECK-IN
    ========================================================= */
@@ -4251,6 +3562,71 @@ footer {
     }
 
 }
+/* =========================================================
+   MY DAY — TODO DELETE BUTTON
+   ========================================================= */
+
+.delete-todo {
+    border: none;
+    background: transparent;
+
+    color: var(--vintage-berry);
+
+    font-size: 1.2rem;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    padding: 3px 7px;
+
+    border-radius: 50%;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.delete-todo:hover {
+    background: rgba(146, 55, 77, 0.12);
+    transform: scale(1.15);
+}
+/* =========================================================
+   MY DAY — TODO CHECKBOXES
+   ========================================================= */
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    flex: 1;
+
+    cursor: pointer;
+}
+
+
+.todo-checkbox {
+    width: 18px;
+    height: 18px;
+
+    accent-color: var(--tropical-teal);
+
+    cursor: pointer;
+}
+
+
+.todo-item span {
+    transition:
+        color 0.2s ease,
+        text-decoration 0.2s ease;
+}
+
+
+.todo-item span.completed {
+    color: #89929d;
+
+    text-decoration: line-through;
+}
 .reset-garden-button {
     margin-top: 20px;
 
@@ -4277,1212 +3653,4 @@ footer {
     color: white;
 
     transform: translateY(-2px);
-}
-/* =========================================================
-   QUOTE GARDEN
-========================================================= */
-
-
-.quote-garden {
-    width: min(1150px, 90%);
-
-    margin: 0 auto;
-
-    padding: 70px 0 100px;
-}
-
-
-
-/* =========================================================
-   CAROUSEL
-========================================================= */
-
-
-.quote-carousel {
-    text-align: center;
-}
-
-
-.quote-carousel h2 {
-    margin-top: 10px;
-
-    margin-bottom: 40px;
-}
-
-
-
-/* =========================================================
-   CARD AREA
-========================================================= */
-
-
-.quote-card-area {
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    gap: 28px;
-
-}
-
-
-
-/* =========================================================
-   QUOTE CARD
-========================================================= */
-
-
-.quote-card {
-
-    position: relative;
-
-    width: min(500px, 70vw);
-
-    height: 600px;
-
-    overflow: hidden;
-
-    border-radius: 28px;
-
-    background: #ffffff;
-
-    box-shadow:
-        0 20px 45px rgba(11, 19, 43, 0.18);
-
-    touch-action: pan-y;
-
-    user-select: none;
-
-    transition:
-        transform 0.25s ease,
-        opacity 0.25s ease;
-
-}
-
-
-.quote-card img {
-
-    width: 100%;
-
-    height: 100%;
-
-    object-fit: cover;
-
-    display: block;
-
-}
-
-
-
-/* =========================================================
-   QUOTE OVERLAY
-========================================================= */
-
-
-.quote-card-overlay {
-
-    position: absolute;
-
-    left: 0;
-
-    right: 0;
-
-    bottom: 0;
-
-    padding: 100px 40px 40px;
-
-    text-align: left;
-
-    color: white;
-
-    background:
-        linear-gradient(
-            to bottom,
-            transparent,
-            rgba(11, 19, 43, 0.9)
-        );
-
-}
-
-
-.card-quote {
-
-    margin: 0 0 14px;
-
-    font-family:
-        "Gentium Plus",
-        serif;
-
-    font-size: 2rem;
-
-    line-height: 1.2;
-
-}
-
-
-.card-author {
-
-    margin: 0;
-
-    font-family:
-        "Shantell Sans",
-        sans-serif;
-
-    font-size: 0.9rem;
-
-}
-
-
-
-/* =========================================================
-   CARD ANIMATION
-========================================================= */
-
-
-.quote-slide-next {
-
-    animation:
-        quoteNext 0.35s ease;
-
-}
-
-
-.quote-slide-previous {
-
-    animation:
-        quotePrevious 0.35s ease;
-
-}
-
-
-@keyframes quoteNext {
-
-    0% {
-
-        opacity: 0;
-
-        transform:
-            translateX(35px)
-            rotate(2deg);
-
-    }
-
-    100% {
-
-        opacity: 1;
-
-        transform:
-            translateX(0)
-            rotate(0);
-
-    }
-
-}
-
-
-@keyframes quotePrevious {
-
-    0% {
-
-        opacity: 0;
-
-        transform:
-            translateX(-35px)
-            rotate(-2deg);
-
-    }
-
-    100% {
-
-        opacity: 1;
-
-        transform:
-            translateX(0)
-            rotate(0);
-
-    }
-
-}
-
-
-
-/* =========================================================
-   ARROW BUTTONS
-========================================================= */
-
-
-.quote-arrow {
-
-    width: 50px;
-
-    height: 50px;
-
-    flex-shrink: 0;
-
-    border: none;
-
-    border-radius: 50%;
-
-    background: #5BC0BE;
-
-    color: #0B132B;
-
-    font-family:
-        "Shantell Sans",
-        sans-serif;
-
-    font-size: 1.4rem;
-
-    font-weight: 700;
-
-    cursor: pointer;
-
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-
-}
-
-
-.quote-arrow:hover {
-
-    transform: scale(1.1);
-
-    box-shadow:
-        0 8px 20px
-        rgba(11, 19, 43, 0.18);
-
-}
-
-
-
-/* =========================================================
-   CONTROLS
-========================================================= */
-
-
-.quote-controls {
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    gap: 25px;
-
-    margin-top: 25px;
-
-}
-
-
-#quoteCounter {
-
-    font-family:
-        "Shantell Sans",
-        sans-serif;
-
-    font-size: 0.9rem;
-
-    color: #34506B;
-
-}
-
-
-.quote-swipe-hint {
-
-    margin-top: 18px;
-
-    font-family:
-        "Shantell Sans",
-        sans-serif;
-
-    font-size: 0.8rem;
-
-    color: #34506B;
-
-    opacity: 0.7;
-
-}
-
-
-
-/* =========================================================
-   SAVED QUOTES
-========================================================= */
-
-
-.saved-quotes {
-
-    margin-top: 100px;
-
-}
-
-
-.saved-quotes .section-heading {
-
-    margin-bottom: 30px;
-
-}
-
-
-.saved-quotes-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(
-            auto-fit,
-            minmax(230px, 1fr)
-        );
-
-    gap: 25px;
-
-}
-
-
-
-/* =========================================================
-   SAVED CARD
-========================================================= */
-
-
-.saved-quote-card {
-
-    overflow: hidden;
-
-    border-radius: 20px;
-
-    background: #ffffff;
-
-    box-shadow:
-        0 10px 30px
-        rgba(11, 19, 43, 0.1);
-
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-
-}
-
-
-.saved-quote-card:hover {
-
-    transform:
-        translateY(-5px);
-
-    box-shadow:
-        0 15px 35px
-        rgba(11, 19, 43, 0.15);
-
-}
-
-
-.saved-quote-card img {
-
-    display: block;
-
-    width: 100%;
-
-    height: 230px;
-
-    object-fit: cover;
-
-}
-
-
-.saved-quote-text {
-
-    padding: 20px;
-
-}
-
-
-.saved-quote-text p {
-
-    margin:
-        0 0 10px;
-
-    font-family:
-        "Gentium Plus",
-        serif;
-
-    font-size: 1.15rem;
-
-    line-height: 1.4;
-
-}
-
-
-.saved-quote-text span {
-
-    font-family:
-        "Shantell Sans",
-        sans-serif;
-
-    font-size: 0.8rem;
-
-    color: #34506B;
-
-}
-
-
-
-/* =========================================================
-   REMOVE BUTTON
-========================================================= */
-
-
-.remove-quote {
-
-    display: block;
-
-    margin-top: 15px;
-
-    padding: 0;
-
-    border: none;
-
-    background: transparent;
-
-    color: #92374D;
-
-    font-family:
-        "Shantell Sans",
-        sans-serif;
-
-    font-size: 0.8rem;
-
-    cursor: pointer;
-
-}
-
-
-.remove-quote:hover {
-
-    text-decoration: underline;
-
-}
-
-
-
-/* =========================================================
-   EMPTY FAVOURITES
-========================================================= */
-
-
-.empty-quotes {
-
-    grid-column: 1 / -1;
-
-    padding: 50px 20px;
-
-    border-radius: 22px;
-
-    background:
-        rgba(255, 255, 255, 0.55);
-
-    text-align: center;
-
-}
-
-
-.empty-quotes span {
-
-    display: block;
-
-    margin-bottom: 10px;
-
-    font-size: 2rem;
-
-}
-
-
-.empty-quotes p {
-
-    margin: 0;
-
-    font-family:
-        "Shantell Sans",
-        sans-serif;
-
-}
-
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-
-@media (max-width: 700px) {
-
-
-    .quote-garden {
-
-        width: 92%;
-
-        padding-top: 45px;
-
-    }
-
-
-    .quote-card-area {
-
-        gap: 8px;
-
-    }
-
-
-    .quote-card {
-
-        width: 72vw;
-
-        height: 500px;
-
-        border-radius: 22px;
-
-    }
-
-
-    .quote-card-overlay {
-
-        padding:
-            80px 25px 25px;
-
-    }
-
-
-    .card-quote {
-
-        font-size: 1.5rem;
-
-    }
-
-
-    .quote-arrow {
-
-        width: 40px;
-
-        height: 40px;
-
-        font-size: 1rem;
-
-    }
-
-
-    .quote-controls {
-
-        flex-direction: column;
-
-        gap: 12px;
-
-    }
-
-
-    .saved-quotes {
-
-        margin-top: 70px;
-
-    }
-
-}
-/* =========================================
-   QUOTE CARDS
-========================================= */
-
-.quote-card {
-    display: none;
-}
-
-.quote-card.active {
-    display: block;
-}
-/* =========================================================
-   ABOUT PAGE
-   ========================================================= */
-
-
-/* =========================================================
-   ABOUT INTRO
-   ========================================================= */
-
-.about-hero {
-    padding-bottom: 75px;
-}
-
-
-/* =========================================================
-   WHAT IS PERFECT DAY?
-   ========================================================= */
-
-.about-section {
-    max-width: 1100px;
-
-    margin: 0 auto 100px;
-    padding: 0 30px;
-
-    display: grid;
-    grid-template-columns: 1fr 0.9fr;
-
-    gap: 50px;
-
-    align-items: center;
-}
-
-
-.about-text .section-tag {
-    margin-bottom: 12px;
-
-    color: var(--vintage-berry);
-}
-
-
-.about-text h2 {
-    margin-bottom: 20px;
-
-    color: var(--prussian-blue);
-
-    font-family: "Gentium Plus", serif;
-    font-size: clamp(2.5rem, 5vw, 4rem);
-
-    line-height: 1;
-}
-
-
-.about-text > p:not(.section-tag) {
-    max-width: 600px;
-
-    margin-bottom: 15px;
-
-    color: var(--dusk-blue);
-
-    line-height: 1.7;
-}
-
-
-/* =========================================================
-   ABOUT CARD
-   ========================================================= */
-
-.about-card {
-    min-height: 390px;
-
-    padding: 30px;
-
-    border-radius: 28px;
-
-    background: var(--neon-ice);
-
-    color: var(--prussian-blue);
-
-    box-shadow:
-        10px 12px 0 rgba(58, 80, 107, 0.1);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    transform: rotate(2deg);
-
-    transition: transform 0.25s ease;
-}
-
-
-.about-card:hover {
-    transform: rotate(0deg) translateY(-5px);
-}
-
-
-.about-card-top {
-    display: flex;
-
-    align-items: center;
-    justify-content: space-between;
-
-    font-size: 0.75rem;
-    font-weight: 800;
-
-    color: var(--vintage-berry);
-}
-
-
-.about-card-middle {
-    text-align: center;
-}
-
-
-.about-sun {
-    margin-bottom: 15px;
-
-    color: var(--vintage-berry);
-
-    font-size: 4rem;
-}
-
-
-.about-card-middle p {
-    max-width: 300px;
-
-    margin: 0 auto;
-
-    font-family: "Gentium Plus", serif;
-
-    font-size: 2.3rem;
-
-    line-height: 1;
-}
-
-
-.about-card-bottom {
-    display: flex;
-
-    justify-content: center;
-
-    gap: 18px;
-
-    color: var(--vintage-berry);
-
-    font-size: 1.1rem;
-}
-
-
-/* =========================================================
-   ABOUT FEATURES
-   ========================================================= */
-
-.about-features {
-    max-width: 1100px;
-
-    margin: 0 auto 100px;
-
-    padding: 0 30px;
-}
-
-
-.about-features .section-heading {
-    margin-bottom: 35px;
-}
-
-
-.about-features .section-heading .section-tag {
-    color: var(--vintage-berry);
-}
-
-
-.about-features .section-heading h2 {
-    margin: 8px 0 12px;
-
-    color: var(--prussian-blue);
-
-    font-family: "Gentium Plus", serif;
-
-    font-size: clamp(2.5rem, 5vw, 4rem);
-
-    line-height: 1;
-}
-
-
-.about-features .section-heading > p:last-child {
-    color: var(--dusk-blue);
-}
-
-
-.about-feature-grid {
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 20px;
-}
-
-
-.about-feature-card {
-    min-height: 220px;
-
-    padding: 28px;
-
-    position: relative;
-
-    display: grid;
-
-    grid-template-columns: 60px 1fr 25px;
-
-    gap: 20px;
-
-    align-items: start;
-
-    border-radius: 24px;
-
-    background: var(--soft-white);
-
-    border: 2px solid rgba(58, 80, 107, 0.1);
-
-    box-shadow:
-        7px 9px 0 rgba(58, 80, 107, 0.08);
-
-    color: var(--prussian-blue);
-
-    text-decoration: none;
-
-    transition:
-        transform 0.25s ease,
-        border-color 0.25s ease;
-}
-
-
-.about-feature-card:hover {
-    transform: translateY(-6px);
-
-    border-color: var(--tropical-teal);
-}
-
-
-.about-feature-card:nth-child(1) {
-    background: var(--neon-ice);
-}
-
-
-.about-feature-card:nth-child(2) {
-    background: var(--lilac);
-}
-
-
-.about-feature-card:nth-child(3) {
-    background: var(--pacific-blue);
-}
-
-
-.about-feature-card:nth-child(4) {
-    background: var(--vintage-berry);
-
-    color: white;
-}
-
-
-.about-feature-icon {
-    width: 55px;
-    height: 55px;
-
-    display: grid;
-    place-items: center;
-
-    border-radius: 17px;
-
-    background: rgba(255, 255, 255, 0.55);
-
-    font-size: 1.7rem;
-}
-
-
-.card-category {
-    margin-bottom: 5px;
-
-    color: var(--vintage-berry);
-
-    font-size: 0.65rem;
-    font-weight: 800;
-
-    letter-spacing: 2px;
-}
-
-
-.about-feature-card:nth-child(4) .card-category {
-    color: var(--neon-ice);
-}
-
-
-.about-feature-card h3 {
-    margin-bottom: 10px;
-
-    font-family: "Gentium Plus", serif;
-
-    font-size: 2rem;
-
-    line-height: 1;
-}
-
-
-.about-feature-card div > p:last-child {
-    color: var(--dusk-blue);
-
-    font-size: 0.9rem;
-
-    line-height: 1.6;
-}
-
-
-.about-feature-card:nth-child(4) div > p:last-child {
-    color: #f0e6e8;
-}
-
-
-.card-arrow {
-    align-self: center;
-
-    font-size: 1.4rem;
-
-    transition: transform 0.2s ease;
-}
-
-
-.about-feature-card:hover .card-arrow {
-    transform: translateX(5px);
-}
-
-
-/* =========================================================
-   ABOUT MESSAGE
-   ========================================================= */
-
-.about-message {
-    max-width: 950px;
-
-    margin: 0 auto 100px;
-
-    padding: 70px 45px;
-
-    position: relative;
-
-    overflow: hidden;
-
-    border-radius: 30px;
-
-    background: var(--space-indigo);
-
-    color: white;
-
-    text-align: center;
-
-    box-shadow:
-        10px 12px 0 rgba(11, 19, 43, 0.12);
-}
-
-
-.about-message-decoration {
-    margin-bottom: 15px;
-
-    color: var(--neon-ice);
-
-    font-size: 2.5rem;
-}
-
-
-.about-message .section-tag {
-    color: var(--neon-ice);
-}
-
-
-.about-message h2 {
-    max-width: 700px;
-
-    margin: 12px auto 20px;
-
-    font-family: "Gentium Plus", serif;
-
-    font-size: clamp(2.7rem, 6vw, 4.5rem);
-
-    line-height: 0.95;
-}
-
-
-.about-message h2 span {
-    color: var(--neon-ice);
-
-    font-style: italic;
-}
-
-
-.about-message > p:not(.section-tag) {
-    max-width: 650px;
-
-    margin: 0 auto 15px;
-
-    color: #d1dcdf;
-
-    line-height: 1.7;
-}
-
-
-.about-stars {
-    margin-top: 25px;
-
-    color: var(--neon-ice);
-
-    font-size: 1.1rem;
-}
-
-
-/* =========================================================
-   ABOUT REMINDER
-   ========================================================= */
-
-.about-reminder {
-    max-width: 1100px;
-
-    margin: 0 auto 100px;
-
-    padding: 0 30px;
-}
-
-
-.about-reminder-card {
-    padding: 65px 40px;
-
-    border-radius: 30px;
-
-    background: var(--pacific-blue);
-
-    color: var(--prussian-blue);
-
-    text-align: center;
-
-    box-shadow:
-        8px 10px 0 rgba(58, 80, 107, 0.08);
-}
-
-
-.reminder-flower {
-    display: block;
-
-    margin-bottom: 12px;
-
-    color: var(--vintage-berry);
-
-    font-size: 2.8rem;
-}
-
-
-.about-reminder-card h2 {
-    max-width: 650px;
-
-    margin: 0 auto 15px;
-
-    font-family: "Gentium Plus", serif;
-
-    font-size: clamp(2.5rem, 5vw, 4rem);
-
-    line-height: 1;
-}
-
-
-.about-reminder-card p {
-    margin-bottom: 25px;
-
-    color: var(--dusk-blue);
-}
-
-
-.about-reminder-card .primary-button {
-    display: inline-block;
-
-    padding: 13px 22px;
-
-    border-radius: 30px;
-
-    background: var(--vintage-berry);
-
-    color: white;
-
-    text-decoration: none;
-
-    font-family: "Shantell Sans", sans-serif;
-    font-weight: 700;
-
-    transition:
-        transform 0.2s ease,
-        background 0.2s ease;
-}
-
-
-.about-reminder-card .primary-button:hover {
-    transform: translateY(-3px);
-
-    background: var(--prussian-blue);
-}
-
-
-/* =========================================================
-   ABOUT RESPONSIVE
-   ========================================================= */
-
-@media (max-width: 900px) {
-
-    .about-section {
-        grid-template-columns: 1fr;
-
-        gap: 40px;
-    }
-
-    .about-card {
-        max-width: 600px;
-
-        width: 100%;
-
-        margin: 0 auto;
-    }
-
-    .about-feature-grid {
-        grid-template-columns: 1fr;
-    }
-
-}
-
-
-@media (max-width: 650px) {
-
-    .about-section,
-    .about-features,
-    .about-reminder {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .about-section {
-        margin-bottom: 75px;
-    }
-
-    .about-card {
-        min-height: 330px;
-
-        padding: 25px;
-    }
-
-    .about-card-middle p {
-        font-size: 2rem;
-    }
-
-    .about-feature-card {
-        grid-template-columns: 50px 1fr 20px;
-
-        gap: 14px;
-
-        padding: 22px;
-
-        min-height: 190px;
-    }
-
-    .about-feature-icon {
-        width: 48px;
-        height: 48px;
-    }
-
-    .about-feature-card h3 {
-        font-size: 1.7rem;
-    }
-
-    .about-message {
-        margin-left: 20px;
-        margin-right: 20px;
-
-        padding: 50px 25px;
-    }
-
-    .about-reminder-card {
-        padding: 50px 25px;
-    }
-
 }

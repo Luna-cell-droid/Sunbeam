@@ -1,10 +1,13 @@
 /* =========================================================
    PERFECT DAY — MY DAY
    ========================================================= */
+
 document.addEventListener("DOMContentLoaded", function () {
+
     /* =====================================================
        GROWTH SYSTEM
        ===================================================== */
+
     let growth =
         Number(localStorage.getItem("perfectDayGrowth")) || 0;
 
@@ -16,24 +19,35 @@ document.addEventListener("DOMContentLoaded", function () {
             "perfectDayGrowth",
             growth
         );
+
     }
+
+
     /* =====================================================
        TODAY'S DATE
        ===================================================== */
+
     const todayDate =
         document.getElementById("todayDate");
+
     if (todayDate) {
+
         const today = new Date();
+
         todayDate.textContent =
             today.toLocaleDateString("en-NZ", {
                 weekday: "long",
                 day: "numeric",
                 month: "long"
             });
+
     }
+
+
     /* =====================================================
        TO-DO LIST
        ===================================================== */
+
     const todoInput =
         document.getElementById("todoInput");
 
@@ -48,18 +62,31 @@ document.addEventListener("DOMContentLoaded", function () {
         JSON.parse(
             localStorage.getItem("perfectDayTodos")
         ) || [];
+
+
     function saveTodos() {
+
         localStorage.setItem(
             "perfectDayTodos",
             JSON.stringify(todos)
         );
+
     }
+
+
     function displayTodos() {
+
         if (!todoList) return;
+
         todoList.innerHTML = "";
+
+
         todos.forEach(function (todo, index) {
+
             const li =
                 document.createElement("li");
+
+
             li.innerHTML = `
                 <label class="todo-item">
                     <input
