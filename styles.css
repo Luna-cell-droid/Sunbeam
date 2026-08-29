@@ -4760,3 +4760,14 @@ footer {
     }
 
 }
+/* =========================================
+   QUOTE CARDS
+========================================= */
+
+.quote-card {
+    display: none;
+}
+
+.quote-card.active {
+    display: block;
+}
